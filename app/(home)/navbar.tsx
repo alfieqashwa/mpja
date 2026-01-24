@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Home", href: "#home", active: true },
   { name: "About Us", href: "#about" },
   { name: "Course", href: "#course" },
-  { name: "Testimony", href: "#testimony" },
+  { name: "Testimony", href: "#testimonials" },
   { name: "Works", href: "#works" },
   { name: "Help", href: "#help" },
 ];
@@ -39,8 +39,8 @@ export function Navbar() {
                 className={cn(
                   "px-4 py-2 text-xl font-medium transition-colors rounded-full",
                   link.active
-                    ? "text-rose-500"
-                    : "text-[#64748B] hover:text-slate-900",
+                    ? "text-[#E11D48]"
+                    : "text-secondary hover:text-slate-900",
                 )}
               >
                 {link.name}

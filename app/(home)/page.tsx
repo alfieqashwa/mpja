@@ -8,7 +8,7 @@ import { Footer } from "./footer";
 import { Hero } from "./Hero";
 import { LearningJourney } from "./learning-journey";
 import { Navbar } from "./navbar";
-import { Testimony } from "./testimony";
+import { Testimonials } from "./testimonials";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <AboutUs />
         <FeatureCourses />
         <LearningJourney />
-        <Testimony />
+        <Testimonials />
         <Faq />
         <Cta />
       </main>
