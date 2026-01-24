@@ -11,7 +11,8 @@ const urbanist = Urbanist({
 
 export const metadata: Metadata = {
   title: "MPJA Learning - Japan Learning",
-  description: "A premier landing page for learning programs in Japan.",
+  description:
+    "A modern learning platform for students and professionals to build practical knowledge at their own pace.",
 };
 
 export default function RootLayout({
