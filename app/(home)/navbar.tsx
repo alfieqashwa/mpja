@@ -19,10 +19,10 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 pt-6 px-4">
+    <header className="absolute top-9 left-0 right-0 z-50">
       <div className="container mx-auto">
         {/* Floating Pill Navbar */}
-        <nav className="flex items-center justify-between gap-4 rounded-full bg-white px-4 py-3 shadow-sm border border-slate-100">
+        <nav className="flex items-center justify-between gap-4 rounded-2xl bg-white px-6 py-3 shadow-sm border border-slate-100">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="size-10 rounded-full bg-linear-to-b from-rose-500 to-rose-600 flex items-center justify-center text-white font-bold text-sm">
@@ -31,13 +31,13 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 text-sm font-medium transition-colors rounded-full",
+                  "px-4 py-2 text-xl font-medium transition-colors rounded-full",
                   link.active
                     ? "text-rose-500"
                     : "text-[#64748B] hover:text-slate-900",
@@ -49,11 +49,11 @@ export function Navbar() {
           </div>
 
           {/* Desktop Action Buttons */}
-          <div className="hidden lg:flex items-center gap-2 shrink-0">
-            <Button size="sm">Login</Button>
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <Button size="lg">Login</Button>
             <Button
-              variant="outline"
-              size="sm"
+              variant="secondary"
+              size="lg"
               className="border-rose-500 text-rose-500 hover:bg-rose-50"
             >
               Sign up

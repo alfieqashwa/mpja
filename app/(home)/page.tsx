@@ -1,3 +1,5 @@
+"use client";
+
 import { AboutUs } from "./about-us";
 import { Cta } from "./cta";
 import { FeatureCourses } from "./feature-courses";

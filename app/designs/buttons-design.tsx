@@ -3,24 +3,9 @@ import { Button } from "@/components/ui/button";
 
 export function ButtonsDesign() {
   return (
-    <div>
+    <div className="thom">
       <h1 className="text-2xl">Buttons Design</h1>
       <div className="grid gap-8 columns-4 mt-8">
-        <section className="space-x-8">
-          <h2>Disabled XL</h2>
-          <Button disabled variant={"default"} size={"xl"}>
-            <ArrowLeftIcon /> Button <ArrowRightIcon />
-          </Button>
-          <Button disabled variant={"secondary"} size={"xl"}>
-            <ArrowLeftIcon /> Button <ArrowRightIcon />
-          </Button>
-          <Button disabled variant={"outline"} size={"xl"}>
-            <ArrowLeftIcon /> Button <ArrowRightIcon />
-          </Button>
-          <Button disabled variant={"ghost"} size={"xl"}>
-            <ArrowLeftIcon /> Button <ArrowRightIcon />
-          </Button>
-        </section>
         <section className="space-x-8">
           <h2>XL</h2>
           <Button
@@ -161,6 +146,21 @@ export function ButtonsDesign() {
             size={"xs"}
             className="hover:cursor-pointer"
           >
+            <ArrowLeftIcon /> Button <ArrowRightIcon />
+          </Button>
+        </section>
+        <section className="space-x-8">
+          <h2>Disabled XL</h2>
+          <Button disabled variant={"default"} size={"xl"}>
+            <ArrowLeftIcon /> Button <ArrowRightIcon />
+          </Button>
+          <Button disabled variant={"secondary"} size={"xl"}>
+            <ArrowLeftIcon /> Button <ArrowRightIcon />
+          </Button>
+          <Button disabled variant={"outline"} size={"xl"}>
+            <ArrowLeftIcon /> Button <ArrowRightIcon />
+          </Button>
+          <Button disabled variant={"ghost"} size={"xl"}>
             <ArrowLeftIcon /> Button <ArrowRightIcon />
           </Button>
         </section>

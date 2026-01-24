@@ -133,3 +133,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility thom {
+  @apply z-50 outline-1 outline-rose-600;
+}
+
+@utility kurt {
+  @apply z-50 outline-1 outline-sky-600;
+}
+
+/* Dashboard preview */
+.mask-fade-half {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 15%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(to bottom, black 0%, black 15%, transparent 100%);
+}
