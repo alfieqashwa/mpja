@@ -1,7 +1,8 @@
 import DottedCard from "@/components/DottedCard";
+import { CertificateIcon, ProductDocumentsIcon } from "@/components/icons/about";
 import { ArrowRightIcon } from "@/components/icons/arrows";
 import { BooksIcon } from "@/components/icons/books";
-import { ArrowRight, BookOpen, CheckCircle2, FileText } from 'lucide-react';
+import { BookOpen, CheckCircle2, FileText } from 'lucide-react';
 import { SectionDescription, SectionTitle, SectionTitle2 } from './section-title';
 
 export function LearningJourney() {
@@ -22,7 +23,7 @@ export function LearningJourney() {
               Explore courses built to support your personal and professional development.
             </p>
           </div>
-          <DottedCard className="mt-10 flex-1 min-h-[320px]">
+          <DottedCard className="mt-10 pr-20 pt-6 flex-1 min-h-[320px]">
             <CourseCompleteCard />
           </DottedCard>
         </div>
@@ -73,21 +74,19 @@ export function LearningJourney() {
 // Visual for Card 1
 function CourseCompleteCard() {
   return (
-    <div className="relative w-full max-w-sm rounded-[2rem] bg-white p-8 shadow-sm">
-      <div className="flex flex-col items-center text-center">
+    <div className="relative w-full max-w-sm rounded-[2rem] border bg-white p-6 shadow-sm">
+      <div className="flex justify-start space-x-8">
         {/* Icon placeholder - matching purple folder */}
-        <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-purple-50">
-          <div className="relative flex h-14 w-16 items-center justify-center rounded-md bg-purple-600 shadow-lg after:absolute after:top-[-6px] after:left-[4px] after:content-[''] after:h-4 after:w-6 after:bg-purple-600 after:rounded-t-sm">
-            <div className="absolute top-[8px] h-10 w-12 bg-purple-400/30 rounded-sm"></div>
-            <div className="absolute top-[12px] h-1 w-8 bg-white/50 rounded-full"></div>
-          </div>
+        <div className="flex h-24 w-24 items-center justify-center rounded-full bg-purple-50">
+          <ProductDocumentsIcon />
         </div>
-
-        <h3 className="text-xl font-medium text-secondary">Course Complete</h3>
-        <div className="mt-2 text-6xl font-bold text-primary">3</div>
+        <article className="flex flex-col items-start space-y-8">
+          <h3 className="text-2xl font-medium text-secondary">Course Complete</h3>
+          <p className="text-[56px] font-bold text-primary">3</p>
+        </article>
       </div>
 
-      <div className="my-8 w-full border-t-2 border-dashed border-slate-100"></div>
+      <div className="my-6 h-[2px] w-full bg-[linear-gradient(to_right,#e2e8f0_50%,transparent_50%)] bg-size-[24px_2px] bg-repeat-x"></div>
 
       <div className="flex justify-between items-center w-full">
         <button className="flex items-center gap-2 text-lg font-bold text-[#E11D48] transition-colors cursor-pointer">
@@ -214,32 +213,23 @@ function LearningProgressCard() {
 // Visual for Card 4
 function CertificationCard() {
   return (
-    <div className="relative w-full max-w-sm rounded-[2rem] bg-white p-8 shadow-sm">
-      <div className="flex flex-col items-center text-center">
-        {/* Certificate Icon - Blue */}
-        <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-blue-50 text-blue-500">
-           <FileText size={48} className="fill-blue-200" /> {/* Abstract representation */}
-           {/* Custom SVG or simpler representation for the certificate icon */}
-           <div className="absolute">
-             <div className="h-14 w-12 rounded-sm bg-blue-500 shadow-lg relative flex items-center justify-center">
-                <div className="h-2 w-8 bg-blue-200/50 rounded-full mb-2"></div>
-                <div className="h-2 w-8 bg-blue-200/50 rounded-full mt-2"></div>
-                {/* Badge */}
-                <div className="absolute -bottom-2 -right-2 h-6 w-6 rounded-full bg-red-400 border-2 border-white"></div>
-             </div>
-           </div>
+    <div className="relative w-full max-w-sm rounded-[2rem] border bg-white p-6 shadow-sm">
+      <div className="flex justify-start space-x-8">
+        <div className="flex h-24 w-24 items-center justify-center rounded-full bg-purple-50">
+          <CertificateIcon />
         </div>
-
-        <h3 className="text-xl font-medium text-slate-500">Total Certificate</h3>
-        <div className="mt-2 text-6xl font-bold text-slate-900">3</div>
+        <article className="flex flex-col items-start space-y-8">
+          <h3 className="text-2xl font-medium text-secondary">Total Certificate</h3>
+          <p className="text-[56px] font-bold text-primary">3</p>
+        </article>
       </div>
 
-      <div className="my-8 w-full border-t-2 border-dashed border-slate-100"></div>
+      <div className="my-6 h-[2px] w-full bg-[linear-gradient(to_right,#e2e8f0_50%,transparent_50%)] bg-size-[24px_2px] bg-repeat-x"></div>
 
       <div className="flex justify-between items-center w-full">
-        <button className="flex items-center gap-2 text-lg font-bold text-rose-500 hover:text-rose-600 transition-colors cursor-pointer">
+        <button className="flex items-center gap-2 text-lg font-bold text-[#E11D48] transition-colors cursor-pointer">
           See All Detail
-          <ArrowRight strokeWidth={2.5} size={20} />
+          <ArrowRightIcon className="text-[#E11D48]" />
         </button>
       </div>
     </div>
