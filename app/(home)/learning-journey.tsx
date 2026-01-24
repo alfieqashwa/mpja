@@ -1,6 +1,6 @@
 export function LearningJourney() {
   return (
-    <section>
+    <section id="works">
       <p>how we work</p>
     </section>
   );

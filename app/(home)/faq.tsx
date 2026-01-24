@@ -1,7 +1,7 @@
 export function Faq() {
   return (
-    <section>
-      <p>help</p>
+    <section id="help">
+      <p>faq</p>
     </section>
   );
 }

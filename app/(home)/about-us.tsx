@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function AboutUs() {
   return (
-    <section className="mt-24 container mx-auto px-4">
+    <section id="about" className="mt-24 container mx-auto px-4">
       <div className="text-center w-lg mx-auto">
         <p className="text-rose-500 font-bold uppercase tracking-wide text-lg">
           ABOUT US

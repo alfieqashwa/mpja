@@ -7,12 +7,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
-  { name: "Home", href: "/", active: true },
-  { name: "About Us", href: "/about" },
-  { name: "Course", href: "/courses" },
-  { name: "Testimoni", href: "/testimonials" },
-  { name: "Works", href: "/works" },
-  { name: "Help", href: "/help" },
+  { name: "Home", href: "#home", active: true },
+  { name: "About Us", href: "#about" },
+  { name: "Course", href: "#course" },
+  { name: "Testimony", href: "#testimony" },
+  { name: "Works", href: "#works" },
+  { name: "Help", href: "#help" },
 ];
 
 export function Navbar() {

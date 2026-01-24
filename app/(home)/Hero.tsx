@@ -7,7 +7,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden from-[#FFF1F2] to-pink-50 rounded-3xl bg-linear-to-b">
+    <section
+      id="home"
+      className="relative overflow-hidden from-[#FFF1F2] to-pink-50 rounded-3xl bg-linear-to-b"
+    >
       <div className="container relative mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24">
         <div className="flex flex-col items-center mt-20">
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-6xl">
