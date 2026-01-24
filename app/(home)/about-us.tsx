@@ -1,21 +1,15 @@
 import { FileIcon, PackageIcon, SecureIcon } from "@/components/icons/about";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { SectionDescription, SectionTitle, SectionTitle2 } from "./section-title";
 
 export function AboutUs() {
   return (
     <section id="about" className="mt-24 container mx-auto px-4">
       <div className="text-center w-lg mx-auto">
-        <p className="text-rose-500 font-bold uppercase tracking-wide text-lg">
-          ABOUT US
-        </p>
-        <h2 className="text-6xl mt-6 font-bold sm:text-4xl text-primary">
-          Our Growing Impact
-        </h2>
-        <p className="max-w-2xl mt-6 mx-auto font-semibold text-2xl text-secondary">
-          Join learners advancing their knowledge through clear, structured
-          online learning.
-        </p>
+        <SectionTitle title="about us" />
+        <SectionTitle2 title="Our Growing Impact" />
+        <SectionDescription description="Join learners advancing their knowledge through clear, structured online learning." />
       </div>
 
       <div className="mt-12 items-center grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start">
