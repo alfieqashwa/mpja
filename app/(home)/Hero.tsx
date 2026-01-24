@@ -1,9 +1,9 @@
+import { BooksIcon } from "@/components/icons/books";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpenIcon } from "lucide-react";
 import Image from "next/image";
-import { BookOpenIcon, BooksIcon } from "./Books";
 
-export function HeroSection1() {
+export function Hero() {
   return (
     <section className="relative overflow-hidden bg-linear-to-b from-pink-50 to-pink-100 rounded-b-3xl">
       <div className="container relative mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24">

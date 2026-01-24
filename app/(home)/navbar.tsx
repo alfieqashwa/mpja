@@ -1,10 +1,10 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const navLinks = [
   { name: "Home", href: "/", active: true },
@@ -15,8 +15,8 @@ const navLinks = [
   { name: "Help", href: "/help" },
 ];
 
-export function Header() {
-  const [isOpen, setIsOpen] = React.useState(false);
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 pt-6 px-4">
