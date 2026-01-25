@@ -9,16 +9,16 @@ import {
 
 export function AboutUs() {
   return (
-    <section id="about" className="kurt">
-      <div className="text-center w-lg mx-auto">
+    <section id="about" className="kurt px-16">
+      <div className="text-center w-full">
         <SectionTitle title="about us" />
         <SectionTitle2 title="Our Growing Impact" />
         <SectionDescription description="Join learners advancing their knowledge through clear, structured online learning." />
       </div>
 
-      <div className="mt-12 items-center grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start">
-        <section className="space-y-6 h-full">
-          <article className="px-6 py-9 space-y-6 flex flex-col items-start border rounded-2xl relative border-slate-200 shadow-sm bg-white overflow-hidden bg-[linear-gradient(to_right,rgba(244,63,94,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(244,63,94,0.15)_1px,transparent_1px)] bg-size-[45px_45px]">
+      <div className="mt-12 items-center flex flex-col w-full thom gap-8 md:flex-row md:items-start">
+        <section className="space-y-6 h-full w-7/12">
+          <article className="py-9 space-y-6 flex flex-col items-start border rounded-2xl relative border-slate-200 shadow-sm bg-white overflow-hidden bg-[linear-gradient(to_right,rgba(244,63,94,0.15)_1px,transparent_1px),linear-gradient(to_bottom,rgba(244,63,94,0.15)_1px,transparent_1px)] bg-size-[45px_45px]">
             <p className="text-3xl font-semibold text-primary">
               MPJA Learning is dedicated to empowering individuals through
               education, community, and accessible learning resources.
@@ -48,12 +48,13 @@ export function AboutUs() {
             </div>
           </div>
         </section>
-        <div>
+        <div className="relative">
           <Image
             alt="About Us Section"
             src="/images/about-us.png"
-            width={500}
+            width={666}
             height={500}
+            // fill
             priority
             className=""
           />

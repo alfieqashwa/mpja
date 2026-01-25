@@ -12,7 +12,7 @@ import { Testimonials } from "./testimonials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col bg-white font-sans">
+    <div className="flex flex-col bg-white font-sans relative">
       <Navbar />
 
       <main className="space-y-24">

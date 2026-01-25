@@ -17,7 +17,7 @@ export function LearningJourney() {
   return (
     <section id="works" className="kurt">
       <div className="text-center">
-        <SectionTitle title="learning journey" />
+        <SectionTitle title="how we work" />
         <SectionTitle2 title="Your Learning Journey" />
         <SectionDescription description="Simple steps to start your learning experience." />
       </div>

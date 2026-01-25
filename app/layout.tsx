@@ -22,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.variable} font-sans antialiased`}>
+      <body
+        className={`${urbanist.variable} font-sans antialiased container mx-auto max-w-355`} // max-width 1420px
+      >
         {children}
       </body>
     </html>

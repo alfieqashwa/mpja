@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden from-[#FFF1F2] to-pink-50 rounded-3xl bg-linear-to-b kurt"
+      className="relative overflow-hidden pt-24 from-[#FFF1F2] to-pink-50 rounded-3xl bg-linear-to-b kurt"
     >
       <div className="relative">
         <div className="flex flex-col items-center mt-20">
@@ -53,8 +53,8 @@ export function Hero() {
         </div>
 
         {/* Starts Dashboard Preview Image */}
-        <div className="relative hidden lg:block perspective-1000">
-          <div className="relative w-full aspect-4/3 transform rotate-y-[-5deg] rotate-x-[5deg] -top-50">
+        <div className="hidden lg:block perspective-1000 kurt">
+          <div className="relative w-full aspect-4/3 transform rotate-y-[-5deg] rotate-x-[5deg] -top-60">
             <Image
               src="/images/dashboard-preview.png"
               alt="Dashboard Preview"
