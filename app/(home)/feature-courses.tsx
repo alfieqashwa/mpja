@@ -62,11 +62,22 @@ export function FeatureCourses() {
             );
           return (
             <div
-              className="bg-white p-4 rounded-4xl max-w-lg"
+              className="bg-white p-4 rounded-4xl w-100"
               key={`${idx}-${card.id}`}
             >
               {/* Image Frame */}
-              <div className="bg-[#FFF1F2] relative rounded-3xl flex h-85 justify-center items-center">
+              <div
+                className="relative flex h-85 items-center justify-center rounded-3xl bg-[#FFF1F2]"
+                style={{
+                  backgroundImage: `
+                    radial-gradient(circle, rgba(255, 255, 255, 0.8) 1.5px, transparent 1.5px),
+                    radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+                    radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px)
+  `,
+                  backgroundSize: "14px 14px, 18px 18px, 24px 24px",
+                  backgroundPosition: "0 0, 11px 16px, 7px 9px",
+                }}
+              >
                 <div className="absolute top-0 left-0 bg-[#FECDD3] p-2 rounded-br-md rounded-tl-md">
                   <p className="flex space-x-1 text-[#E11D48] font-semibold">
                     <Link size={20} />
