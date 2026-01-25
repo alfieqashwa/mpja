@@ -1,11 +1,15 @@
 import { FileIcon, PackageIcon, SecureIcon } from "@/components/icons/about";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { SectionDescription, SectionTitle, SectionTitle2 } from "./section-title";
+import {
+  SectionDescription,
+  SectionTitle,
+  SectionTitle2,
+} from "./section-title";
 
 export function AboutUs() {
   return (
-    <section id="about" className="mt-24 container mx-auto px-4">
+    <section id="about" className="kurt">
       <div className="text-center w-lg mx-auto">
         <SectionTitle title="about us" />
         <SectionTitle2 title="Our Growing Impact" />

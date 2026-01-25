@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export function Cta() {
   return (
-    <section className="py-16 md:py-24 bg-linear-to-b from-rose-500 to-pink-100">
-      <div className="container mx-auto px-4 text-center">
+    <section className="kurt bg-linear-to-b from-rose-500 to-pink-100">
+      <div className="">
         <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl mb-4">
           Ready to Start Your Learning Journey?
         </h2>

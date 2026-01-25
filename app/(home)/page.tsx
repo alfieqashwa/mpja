@@ -15,7 +15,7 @@ export default function Home() {
     <div className="flex flex-col bg-white font-sans">
       <Navbar />
 
-      <main className="flex-1">
+      <main className="space-y-24">
         <Hero />
         <AboutUs />
         <FeatureCourses />

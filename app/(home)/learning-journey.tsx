@@ -15,7 +15,7 @@ import {
 
 export function LearningJourney() {
   return (
-    <section id="works" className="container mx-auto px-4 py-20">
+    <section id="works" className="kurt">
       <div className="text-center">
         <SectionTitle title="learning journey" />
         <SectionTitle2 title="Your Learning Journey" />
