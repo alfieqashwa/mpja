@@ -19,8 +19,8 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-9 left-1/2 -translate-x-1/2 w-300 z-99">
-      <div className="container mx-auto">
+    <header className="fixed top-0 left-1/2 -translate-x-1/2 w-355 z-99 backdrop-blur-lg">
+      <div className="mt-9 mx-18">
         {/* Floating Pill Navbar */}
         <nav className="flex items-center justify-between gap-4 rounded-2xl bg-white px-6 py-3 shadow-sm border border-slate-100">
           {/* Logo */}
