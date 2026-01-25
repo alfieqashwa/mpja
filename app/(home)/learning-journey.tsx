@@ -6,7 +6,7 @@ import {
 } from "@/components/icons/about";
 import { ArrowRightIcon } from "@/components/icons/arrows";
 import { BooksIcon, SmallBookIcon } from "@/components/icons/books";
-import { BookOpen, CheckCircle2, FileText } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import {
   SectionDescription,
   SectionTitle,
@@ -16,11 +16,11 @@ import {
 export function LearningJourney() {
   return (
     <section id="works" className="kurt">
-      <div className="text-center">
+      <article className="text-center">
         <SectionTitle title="how we work" />
         <SectionTitle2 title="Your Learning Journey" />
         <SectionDescription description="Simple steps to start your learning experience." />
-      </div>
+      </article>
 
       <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-12 p-6">
         {/* Card 1: Browse Courses */}
