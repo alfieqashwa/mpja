@@ -38,9 +38,8 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button size="xl">
-              Explore courses{" "}
-              <ArrowRightIcon className="hover:cursor-pointer" />
+            <Button size="xl" className="hover:cursor-pointer">
+              Explore courses <ArrowRightIcon />
             </Button>
 
             <Button

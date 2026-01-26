@@ -50,11 +50,13 @@ export function Navbar() {
 
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <Button size="lg">Login</Button>
+            <Button size="lg" className="hover:cursor-pointer">
+              Login
+            </Button>
             <Button
               variant="secondary"
               size="lg"
-              className="border-rose-500 text-rose-500 hover:bg-rose-50"
+              className="border-rose-500 text-rose-500 hover:bg-rose-50 hover:cursor-pointer"
             >
               Sign up
             </Button>
