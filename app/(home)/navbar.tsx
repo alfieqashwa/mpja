@@ -1,20 +1,18 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { useActiveSection } from "@/hooks/use-active-section"
 import { cn } from "@/lib/utils"
-import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
 
 type NavLinks = {
   name: string
   href: string
-  active?: boolean
 }
 
 const navLinks: NavLinks[] = [
-  { name: "Home", href: "#home", active: true },
+  { name: "Home", href: "#home" },
   { name: "About Us", href: "#about" },
   { name: "Course", href: "#course" },
   { name: "Testimony", href: "#testimonials" },
@@ -23,7 +21,7 @@ const navLinks: NavLinks[] = [
 ]
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const active = useActiveSection()
 
   return (
     <header className="fixed top-0 left-1/2 -translate-x-1/2 w-355 z-99 backdrop-blur-lg">
@@ -51,7 +49,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "px-4 py-2 text-lg font-medium transition-colors rounded-full whitespace-nowrap",
-                  link.active
+                  link.name.toLowerCase() === active
                     ? "text-[#E11D48] font-semibold"
                     : "text-secondary hover:text-[#E11D48] hover:font-semibold",
                 )}
@@ -78,48 +76,7 @@ export function Navbar() {
               </Button>
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-slate-600"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
-          </button>
         </nav>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden mt-2 rounded-2xl bg-white p-4 shadow-lg border border-slate-100 animate-in slide-in-from-top-2">
-            <nav className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "px-4 py-3 text-sm font-medium rounded-lg transition-colors",
-                    link.active
-                      ? "text-[#E11D48] font-semibold bg-rose-50"
-                      : "text-secondary",
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <hr className="my-2 border-slate-100" />
-              <div className="flex flex-col gap-2 mt-2">
-                <Button className="w-full">Login</Button>
-                <Button
-                  variant="outline"
-                  className="w-full border-rose-500 text-rose-500 hover:bg-rose-50"
-                >
-                  Sign up
-                </Button>
-              </div>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   )
