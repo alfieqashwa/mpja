@@ -51,7 +51,7 @@ export function AboutUs() {
         <div className="relative">
           <Image
             alt="About Us Section"
-            src="/images/about-us.png"
+            src="/img/about-us.png"
             width={666}
             height={500}
             // fill

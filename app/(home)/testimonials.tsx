@@ -16,7 +16,7 @@ export function Testimonials() {
       <div className="pt-12 flex flex-col md:flex-row gap-10">
         {[
           {
-            picture: "/images/testimony-1.png",
+            picture: "/img/testimony-1.png",
             name: "Aina M. • Graduate Student • Tokyo",
             testimony: `
               “Clear structure and practical examples made it easy to stay
@@ -24,12 +24,12 @@ export function Testimonials() {
             `,
           },
           {
-            picture: "/images/testimony-2.png",
+            picture: "/img/testimony-2.png",
             name: "Faris R. • Quality Assurance Associate • Osaka",
             testimony: `“The lessons are concise and well-organized. I especially appreciated how the content stays halal-compliant while remaining industry-focused.”`,
           },
           {
-            picture: "/images/testimony-3.png",
+            picture: "/img/testimony-3.png",
             name: "Nadia S. • Marketing Specialist • Yokohama",
             testimony: `“MPJA helped me understand halal standards in a professional context. The learning flow—from modules to quizzes—kept me on track.”`,
           },
@@ -40,7 +40,7 @@ export function Testimonials() {
           >
             <div className="absolute right-0 top-0">
               <Image
-                src="/images/quote.png"
+                src="/img/quote.png"
                 alt="Quote"
                 width={174}
                 height={142}

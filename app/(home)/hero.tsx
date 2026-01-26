@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden pt-24 rounded-3xl">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-[url('/images/hero-bg-image.svg')] bg-cover bg-center bg-no-repeat">
+      <div className="absolute inset-0 bg-[url('/img/hero-bg-img.svg')] bg-cover bg-center bg-no-repeat">
         {/* fade to white */}
         <div className="absolute bottom-0 h-48 w-full bg-linear-to-t from-white to-transparent" />
       </div>
@@ -55,7 +55,7 @@ export function Hero() {
         {/* Dashboard Preview Image */}
         <div className="mt-20">
           <Image
-            src="/images/dashboard-preview.png"
+            src="/img/dashboard-preview.png"
             alt="Dashboard Preview"
             width={1200}
             height={856}

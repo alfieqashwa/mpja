@@ -32,7 +32,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="size-16 rounded-full flex items-center justify-center text-white font-bold text-sm">
               <Image
-                src="/images/logo.png"
+                src="/img/logo.png"
                 alt="MPJA"
                 width={60}
                 height={60}

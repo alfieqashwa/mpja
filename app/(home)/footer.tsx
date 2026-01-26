@@ -38,7 +38,7 @@ export function Footer() {
         <div className="w-1/2 max-w-md">
           <div className="flex items-center space-x-3">
             <Image
-              src="/images/logo.png"
+              src="/img/logo.png"
               alt="MPJA"
               width={76}
               height={83}
