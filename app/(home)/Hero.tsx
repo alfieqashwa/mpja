@@ -54,7 +54,7 @@ export function Hero() {
         </div>
 
         {/* Dashboard Preview Image */}
-        <div className="kurt mt-20">
+        <div className="mt-20">
           <Image
             src="/images/dashboard-preview.png"
             alt="Dashboard Preview"

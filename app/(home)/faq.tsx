@@ -6,7 +6,7 @@ import {
 
 export function Faq() {
   return (
-    <section id="help" className="kurt mx-16">
+    <section id="help" className="mx-16">
       <article className="text-center">
         <SectionTitle title="help" />
         <SectionSubTitle title="Frequently Asked Questions" />

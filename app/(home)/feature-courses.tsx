@@ -12,9 +12,9 @@ export function FeatureCourses() {
   return (
     <section
       id="course"
-      className="rounded-2xl kurt bg-linear-to-b px-16 pb-36 pt-24 from-[#FFF1F2] from-10% via-[#FECDD3] to-90% to-pink-50"
+      className="rounded-2xl bg-linear-to-b px-16 pb-36 pt-24 from-[#FFF1F2] from-10% via-[#FECDD3] to-90% to-pink-50"
     >
-      <div className="text-center thom">
+      <div className="text-center">
         <article>
           <SectionTitle title="course" />
           <SectionSubTitle title="Featured Courses" />

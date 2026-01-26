@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 
 export function ButtonsDesign() {
   return (
-    <div className="thom">
+    <div>
       <h1 className="text-2xl">Buttons Design</h1>
       <div className="grid gap-8 columns-4 mt-8">
         <section className="space-x-8">

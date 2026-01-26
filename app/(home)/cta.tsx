@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function Cta() {
   return (
-    <section className="kurt bg-linear-to-b from-rose-50 from-10% via-rose-100 via-40% to-85% to-rose-50/50 relative">
+    <section className="bg-linear-to-b from-rose-50 from-10% via-rose-100 via-40% to-85% to-rose-50/50 relative">
       <div className="pl-19 pt-26 w-1/2 space-y-6 pb-30">
         <h2 className="text-6xl font-bold text-primary">
           Ready to Start Your <br />

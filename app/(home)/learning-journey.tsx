@@ -15,7 +15,7 @@ import {
 
 export function LearningJourney() {
   return (
-    <section id="works" className="kurt">
+    <section id="works">
       <article className="text-center">
         <SectionTitle title="how we work" />
         <SectionSubTitle title="Your Learning Journey" />

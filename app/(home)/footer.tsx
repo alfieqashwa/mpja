@@ -33,7 +33,7 @@ const QUICK_ACCESS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white kurt mt-24 px-20">
+    <footer className="border-t border-slate-200 bg-white pt-24 px-20">
       <div className="flex justify-between">
         <div className="w-1/2 max-w-md">
           <div className="flex items-center space-x-3">

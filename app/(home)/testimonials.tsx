@@ -7,13 +7,13 @@ import {
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="kurt">
+    <section id="testimonials">
       <article className="text-center">
         <SectionTitle title="testimony" />
         <SectionSubTitle title="Success Stories" />
         <SectionDescription description="Hear from learners who study with MPJA." />
       </article>
-      <div className="pt-12 thom flex flex-col md:flex-row gap-10">
+      <div className="pt-12 flex flex-col md:flex-row gap-10">
         {[
           {
             picture: "/images/testimony-1.png",
