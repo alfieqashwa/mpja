@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 
@@ -31,8 +32,14 @@ export function Navbar() {
         <nav className="flex items-center justify-between gap-4 rounded-2xl bg-white px-6 py-3 shadow-sm border border-slate-100">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="size-10 rounded-full bg-linear-to-b from-rose-500 to-rose-600 flex items-center justify-center text-white font-bold text-sm">
-              M
+            <div className="size-16 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <Image
+                src="/images/logo.png"
+                alt="MPJA"
+                width={60}
+                height={60}
+                priority
+              />
             </div>
           </Link>
 
@@ -89,8 +96,8 @@ export function Navbar() {
                   className={cn(
                     "px-4 py-3 text-sm font-medium rounded-lg transition-colors",
                     link.active
-                      ? "text-rose-500 bg-rose-50"
-                      : "text-slate-600 hover:bg-slate-50",
+                      ? "text-[#E11D48] font-semibold bg-rose-50"
+                      : "text-secondary",
                   )}
                 >
                   {link.name}
