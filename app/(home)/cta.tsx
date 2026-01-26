@@ -21,7 +21,6 @@ export function Cta() {
         </div>
       </div>
 
-      {/* <div className="relative w-full aspect-4/3 transform rotate-y-[-5deg] rotate-x-[5deg] -top-60"> */}
       <div className="bottom-0 right-0 absolute">
         <Image
           src="/images/cta-image.png"

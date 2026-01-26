@@ -1,96 +1,75 @@
+import Image from "next/image";
+
+const QUICK_ACCESS = [
+  {
+    title: "quick links",
+    access: [
+      { link: "Courses" },
+      { link: "Programs" },
+      { link: "Certificates" },
+    ],
+  },
+  {
+    title: "learning",
+    access: [
+      { link: "How It Works" },
+      { link: "Learning Pathways" },
+      { link: "Assessment & Grading" },
+    ],
+  },
+  {
+    title: "company",
+    access: [{ link: "About MPJA" }, { link: "Contact" }],
+  },
+  {
+    title: "resources",
+    access: [
+      { link: "FAQ" },
+      { link: "Help Center" },
+      { link: "Terms & Privacy" },
+    ],
+  },
+];
+
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white kurt">
-      <div className="container mx-auto px-4">
-        <div className="grid gap-8 md:grid-cols-4">
-          <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-4">
-              MPJA Learning
-            </h3>
-            <p className="text-sm text-slate-500">
-              MPJA Learning is an online learning platform offering structured
-              courses for students and professionals.
-            </p>
+    <footer className="border-t border-slate-200 bg-white kurt mt-24">
+      <div className="flex justify-between">
+        <div className="w-1/2 max-w-md">
+          <div className="flex items-center space-x-3">
+            <Image
+              src="/images/logo.png"
+              alt="MPJA"
+              width={76}
+              height={83}
+              priority
+            />
+            <h3 className="text-3xl font-bold text-primary">MPJA Learning</h3>
           </div>
-          <div>
-            <h4 className="font-semibold text-slate-900 mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-slate-900 mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Support
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Terms
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-slate-900 mb-4">Connect</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-rose-500">
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p className="text-lg text-secondary font-medium pt-4">
+            MPJA Learning is an online learning platform offering structured
+            courses for students and professionals seeking practical, flexible,
+            and accessible education.
+          </p>
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center text-sm text-slate-400">
-          © 2025 MPJA Learning. All rights reserved.
+        <div className="w-1/2">
+          <h4 className="font-bold text-primary text-lg">Quick Links</h4>
+          <ul className="space-y-4 text-secondary">
+            <li>
+              <a href="#">Courses</a>
+            </li>
+            <li>
+              <a href="#">Programs</a>
+            </li>
+            <li>
+              <a href="#">Certificates</a>
+            </li>
+          </ul>
         </div>
+      </div>
+
+      <div className="mt-12 pt-8 border-t border-slate-200 text-center text-sm text-slate-400">
+        © 2025 MPJA Learning. All rights reserved.
       </div>
     </footer>
   );
