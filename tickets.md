@@ -2,17 +2,29 @@
 
 ### Design System
 
-#### Atomic Designs
+#### Variables (Colors)
 
-[-] Variables (Colors)
+[x] Primary, Secondary, Danger
 
-[-] Components (Buttons, Cards, Calendars, Drawers, etc)
+#### Components (Buttons, Cards, Calendars, Drawers, etc)
 
-[-] Layouts (Sidebars, Nav, Hero, CTA, etc)
+[x] Buttons ["/designs"](http://localhost:3000/designs)
+
+#### Layouts (Sidebars, Nav, Hero, CTA, etc)
+
+[x] Root Layout
+
+[x] Navbar
+
+[x] Hero
+
+[x] CTA
+
+[-] Sidebars
 
 #### Pages UI
 
-[-] Landing / Home Page
+[x] Landing / Home Page
 
 [-] Sign-in / Sign-up
 
@@ -20,7 +32,7 @@
 
 [-] ...
 
-#### Mobile View
+#### Mobile View (No Figma Design Yet)
 
 [-] Landing / Home Page
 
