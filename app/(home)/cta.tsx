@@ -23,7 +23,7 @@ export function Cta() {
 
       <div className="bottom-0 right-0 absolute">
         <Image
-          src="/img/cta-image.png"
+          src="/img/cta-img.png"
           alt="Dashboard preview"
           width={720}
           height={800}
