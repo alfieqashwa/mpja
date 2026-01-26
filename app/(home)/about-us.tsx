@@ -35,7 +35,7 @@ export function AboutUs() {
             <div className="grid grid-cols-3 py-12">
               {[
                 { title: "Professional Course", count: "6+" },
-                { title: "HAppy User", count: "3+" },
+                { title: "Happy User", count: "3+" },
                 { title: "Structured Learning", count: "100%" },
               ].map((impact, idx) => (
                 <div className="text-center" key={`${impact}-${idx}`}>
