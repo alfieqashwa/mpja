@@ -1,6 +1,6 @@
 "use client"
 
-import { BooksIcon } from "@/components/icons/books"
+import { BooksIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { ArrowRightIcon, BookOpenIcon } from "lucide-react"
 import Image from "next/image"

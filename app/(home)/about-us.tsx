@@ -1,4 +1,4 @@
-import { FileIcon, PackageIcon, SecureIcon } from "@/components/icons/about"
+import { FileIcon, PackageIcon, SecureIcon } from "@/components/custom-icons"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import {

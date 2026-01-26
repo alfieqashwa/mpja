@@ -1,11 +1,12 @@
-import DottedCard from "@/components/DottedCard"
 import {
+  ArrowRightIcon,
+  BooksIcon,
   CertificateIcon,
   ProductDocumentsIcon,
+  SmallBookIcon,
   SmallCertificateIcon,
-} from "@/components/icons/about"
-import { ArrowRightIcon } from "@/components/icons/arrows"
-import { BooksIcon, SmallBookIcon } from "@/components/icons/books"
+} from "@/components/custom-icons"
+import DottedCard from "@/components/DottedCard"
 import { CheckCircle2 } from "lucide-react"
 import {
   SectionDescription,

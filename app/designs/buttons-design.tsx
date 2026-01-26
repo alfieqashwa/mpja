@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@/components/icons/arrows"
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 
 export function ButtonsDesign() {

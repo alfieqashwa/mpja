@@ -1,4 +1,4 @@
-import { BookIcon, BookOpenIcon, BooksIcon } from "@/components/icons/books"
+import { BookIcon, BookOpenIcon, BooksIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Heart, Link } from "lucide-react"

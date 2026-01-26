@@ -6,7 +6,13 @@ import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 
-const navLinks = [
+type NavLinks = {
+  name: string
+  href: string
+  active?: boolean
+}
+
+const navLinks: NavLinks[] = [
   { name: "Home", href: "#home", active: true },
   { name: "About Us", href: "#about" },
   { name: "Course", href: "#course" },
@@ -37,10 +43,10 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 text-xl font-medium transition-colors rounded-full whitespace-nowrap",
+                  "px-4 py-2 text-lg font-medium transition-colors rounded-full whitespace-nowrap",
                   link.active
-                    ? "text-[#E11D48]"
-                    : "text-secondary hover:text-slate-900",
+                    ? "text-[#E11D48] font-semibold"
+                    : "text-secondary hover:text-[#E11D48] hover:font-semibold",
                 )}
               >
                 {link.name}
