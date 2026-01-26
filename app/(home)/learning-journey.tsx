@@ -9,8 +9,8 @@ import { BooksIcon, SmallBookIcon } from "@/components/icons/books";
 import { CheckCircle2 } from "lucide-react";
 import {
   SectionDescription,
+  SectionSubTitle,
   SectionTitle,
-  SectionTitle2,
 } from "./section-title";
 
 export function LearningJourney() {
@@ -18,7 +18,7 @@ export function LearningJourney() {
     <section id="works" className="kurt">
       <article className="text-center">
         <SectionTitle title="how we work" />
-        <SectionTitle2 title="Your Learning Journey" />
+        <SectionSubTitle title="Your Learning Journey" />
         <SectionDescription description="Simple steps to start your learning experience." />
       </article>
 

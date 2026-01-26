@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { Heart, Link } from "lucide-react";
 import {
   SectionDescription,
+  SectionSubTitle,
   SectionTitle,
-  SectionTitle2,
 } from "./section-title";
 
 export function FeatureCourses() {
@@ -17,7 +17,7 @@ export function FeatureCourses() {
       <div className="text-center thom">
         <article>
           <SectionTitle title="course" />
-          <SectionTitle2 title="Featured Courses" />
+          <SectionSubTitle title="Featured Courses" />
           <SectionDescription description="Find the right course to match your learning goals." />
         </article>
 

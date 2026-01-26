@@ -6,7 +6,7 @@ export const SectionTitle = ({ title }: { title: string }) => (
   </p>
 );
 
-export const SectionTitle2 = ({ title }: { title: string }) => (
+export const SectionSubTitle = ({ title }: { title: string }) => (
   <h2 className="text-6xl mt-6 font-bold sm:text-4xl text-primary">{title}</h2>
 );
 

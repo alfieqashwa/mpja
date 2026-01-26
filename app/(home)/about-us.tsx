@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import {
   SectionDescription,
+  SectionSubTitle,
   SectionTitle,
-  SectionTitle2,
 } from "./section-title";
 
 export function AboutUs() {
@@ -12,7 +12,7 @@ export function AboutUs() {
     <section id="about" className="kurt px-16">
       <div className="text-center w-full">
         <SectionTitle title="about us" />
-        <SectionTitle2 title="Our Growing Impact" />
+        <SectionSubTitle title="Our Growing Impact" />
         <SectionDescription description="Join learners advancing their knowledge through clear, structured online learning." />
       </div>
 

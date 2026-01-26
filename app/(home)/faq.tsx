@@ -1,7 +1,7 @@
 import {
   SectionDescription,
+  SectionSubTitle,
   SectionTitle,
-  SectionTitle2,
 } from "./section-title";
 
 export function Faq() {
@@ -9,7 +9,7 @@ export function Faq() {
     <section id="help" className="kurt mx-16">
       <article className="text-center">
         <SectionTitle title="help" />
-        <SectionTitle2 title="Frequently Asked Questions" />
+        <SectionSubTitle title="Frequently Asked Questions" />
         <SectionDescription description="Join learners advancing their knowledge through clear, structured learning." />
       </article>
       <div className="mt-12 border-2 rounded-2xl p-8">
