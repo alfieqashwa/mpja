@@ -12,12 +12,13 @@ const buttonVariants = cva(
         // default:
         //   "bg-gradient-to-b from-rose-500 to-rose-600 text-white shadow-[0_0_0_1px_rgba(251,113,133,1),0_1px_3px_-1px_rgba(251,113,133,1),inset_0_1px_0_0_rgba(251,113,133,1)] hover:opacity-90",
         default:
-          "text-white bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.16)_100%),linear-gradient(180deg,#F43F5E_0%,#E11D48_100%)] shadow-[0px_1px_3px_-1px_#FB7185,0px_0px_0px_1px_#FB7185,inset_0px_1px_0px_#FB7185] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.16)_100%),linear-gradient(180deg,#FECDD3_0%,#E11D48_100%)]",
+          "text-white bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.16)_100%),linear-gradient(180deg,#F43F5E_0%,#E11D48_100%)] shadow-[0px_1px_3px_-1px_#FB7185,0px_0px_0px_1px_#FB7185,inset_0px_1px_0px_#FB7185] hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.16)_0%,rgba(255,255,255,0.16)_100%),linear-gradient(180deg,#FECDD3_0%,#E11D48_100%)] transition-all ease-in-out",
         secondary:
-          "bg-[#FDF2F8] text-rose-600 shadow-[0px_1px_3px_-1px_#FB7185,0px_0px_0px_1px_#FB7185,inset_0px_1px_0px_#FB7185]",
-        outline: "bg-white text-rose-600 border border-[#E11D48] shadow-none",
+          "bg-[#FDF2F8] text-rose-600 shadow-[0px_1px_3px_-1px_#FB7185,0px_0px_0px_1px_#FB7185,inset_0px_1px_0px_#FB7185]  transition-all ease-in-out hover:shadow-none",
+        outline:
+          "bg-white text-rose-600 border border-[#E11D48] shadow-none hover:bg-[#FDF2F8] transition-all ease-in-out",
         ghost:
-          "bg-transparent text-rose-600 p-0 h-auto shadow-none hover:bg-[#FDF2F8]",
+          "bg-transparent text-rose-600 p-0 h-auto shadow-none hover:bg-[#FDF2F8] transition-all ease-in-out",
         link: "text-rose-500 underline-offset-4 hover:underline",
         destructive: "bg-destructive text-white hover:bg-destructive/90",
       },
