@@ -1,11 +1,11 @@
-import { FileIcon, PackageIcon, SecureIcon } from "@/components/icons/about";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { FileIcon, PackageIcon, SecureIcon } from "@/components/icons/about"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
 import {
   SectionDescription,
   SectionSubTitle,
   SectionTitle,
-} from "./section-title";
+} from "./section-title"
 
 export function AboutUs() {
   return (
@@ -107,5 +107,5 @@ export function AboutUs() {
         ))}
       </div>
     </section>
-  );
+  )
 }

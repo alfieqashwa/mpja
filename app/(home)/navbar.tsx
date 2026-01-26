@@ -1,10 +1,10 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { Menu, X } from "lucide-react"
+import Link from "next/link"
+import { useState } from "react"
 
 const navLinks = [
   { name: "Home", href: "#home", active: true },
@@ -13,10 +13,10 @@ const navLinks = [
   { name: "Testimony", href: "#testimonials" },
   { name: "Works", href: "#works" },
   { name: "Help", href: "#help" },
-];
+]
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <header className="fixed top-0 left-1/2 -translate-x-1/2 w-355 z-99 backdrop-blur-lg">
@@ -103,5 +103,5 @@ export function Navbar() {
         )}
       </div>
     </header>
-  );
+  )
 }

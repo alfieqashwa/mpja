@@ -1,9 +1,9 @@
-"use client";
+"use client"
 
-import { BooksIcon } from "@/components/icons/books";
-import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, BookOpenIcon } from "lucide-react";
-import Image from "next/image";
+import { BooksIcon } from "@/components/icons/books"
+import { Button } from "@/components/ui/button"
+import { ArrowRightIcon, BookOpenIcon } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   return (
@@ -66,5 +66,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

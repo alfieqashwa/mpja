@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from "react"
 
 export const SmallBookIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -14,7 +14,7 @@ export const SmallBookIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const BookIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -30,7 +30,7 @@ export const BookIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const BookOpenIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -46,7 +46,7 @@ export const BookOpenIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const BooksIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -62,4 +62,4 @@ export const BooksIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)

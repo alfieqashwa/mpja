@@ -1,17 +1,17 @@
-import DottedCard from "@/components/DottedCard";
+import DottedCard from "@/components/DottedCard"
 import {
   CertificateIcon,
   ProductDocumentsIcon,
   SmallCertificateIcon,
-} from "@/components/icons/about";
-import { ArrowRightIcon } from "@/components/icons/arrows";
-import { BooksIcon, SmallBookIcon } from "@/components/icons/books";
-import { CheckCircle2 } from "lucide-react";
+} from "@/components/icons/about"
+import { ArrowRightIcon } from "@/components/icons/arrows"
+import { BooksIcon, SmallBookIcon } from "@/components/icons/books"
+import { CheckCircle2 } from "lucide-react"
 import {
   SectionDescription,
   SectionSubTitle,
   SectionTitle,
-} from "./section-title";
+} from "./section-title"
 
 export function LearningJourney() {
   return (
@@ -81,7 +81,7 @@ export function LearningJourney() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Visual for Card 1
@@ -110,7 +110,7 @@ function CourseCompleteCard() {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
 // Visual for Card 2
@@ -147,7 +147,7 @@ function EnrollCard() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // Visual for Card 3
@@ -256,7 +256,7 @@ function LearningProgressCard() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // Visual for Card 4
@@ -284,5 +284,5 @@ function CertificationCard() {
         </button>
       </div>
     </div>
-  );
+  )
 }

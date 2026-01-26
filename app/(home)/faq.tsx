@@ -2,7 +2,7 @@ import {
   SectionDescription,
   SectionSubTitle,
   SectionTitle,
-} from "./section-title";
+} from "./section-title"
 
 export function Faq() {
   return (
@@ -16,7 +16,7 @@ export function Faq() {
         <FaqList />
       </div>
     </section>
-  );
+  )
 }
 
 import {
@@ -24,7 +24,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from "@/components/ui/accordion"
 
 const faqs = [
   {
@@ -51,7 +51,7 @@ const faqs = [
     answer:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius omnis laborum, dolores rerum aliquam quam debitis iste porro dolor velit. Corrupti ipsam adipisci quisquam modi veritatis ea velit est aut.",
   },
-];
+]
 
 export function FaqList() {
   return (
@@ -71,5 +71,5 @@ export function FaqList() {
         </AccordionItem>
       ))}
     </Accordion>
-  );
+  )
 }

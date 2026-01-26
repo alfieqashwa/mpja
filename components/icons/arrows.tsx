@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from "react"
 
 export const ArrowLeftIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -14,7 +14,7 @@ export const ArrowLeftIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)
 
 export const ArrowRightIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -30,4 +30,4 @@ export const ArrowRightIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="currentColor"
     />
   </svg>
-);
+)

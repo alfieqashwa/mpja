@@ -1,5 +1,5 @@
-import { ArrowLeftIcon, ArrowRightIcon } from "@/components/icons/arrows";
-import { Button } from "@/components/ui/button";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/components/icons/arrows"
+import { Button } from "@/components/ui/button"
 
 export function ButtonsDesign() {
   return (
@@ -166,5 +166,5 @@ export function ButtonsDesign() {
         </section>
       </div>
     </div>
-  );
+  )
 }

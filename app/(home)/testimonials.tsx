@@ -1,18 +1,16 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import Image from "next/image"
 import {
   SectionDescription,
+  SectionSubTitle,
   SectionTitle,
-  SectionTitle2,
-} from "./section-title";
-import Image from "next/image";
+} from "./section-title"
 
 export function Testimonials() {
   return (
     <section id="testimonials" className="kurt">
       <article className="text-center">
         <SectionTitle title="testimony" />
-        <SectionTitle2 title="Success Stories" />
+        <SectionSubTitle title="Success Stories" />
         <SectionDescription description="Hear from learners who study with MPJA." />
       </article>
       <div className="pt-12 thom flex flex-col md:flex-row gap-10">
@@ -66,5 +64,5 @@ export function Testimonials() {
         ))}
       </div>
     </section>
-  );
+  )
 }

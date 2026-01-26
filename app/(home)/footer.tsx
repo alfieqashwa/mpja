@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/image"
 
 const QUICK_ACCESS = [
   {
@@ -29,7 +29,7 @@ const QUICK_ACCESS = [
       { link: "Terms & Privacy" },
     ],
   },
-];
+]
 
 export function Footer() {
   return (
@@ -77,5 +77,5 @@ export function Footer() {
         <p>Privacy Policy • Terms of Service</p>
       </div>
     </footer>
-  );
+  )
 }

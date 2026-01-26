@@ -1,12 +1,12 @@
-import { BookIcon, BookOpenIcon, BooksIcon } from "@/components/icons/books";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Heart, Link } from "lucide-react";
+import { BookIcon, BookOpenIcon, BooksIcon } from "@/components/icons/books"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { Heart, Link } from "lucide-react"
 import {
   SectionDescription,
   SectionSubTitle,
   SectionTitle,
-} from "./section-title";
+} from "./section-title"
 
 export function FeatureCourses() {
   return (
@@ -60,7 +60,7 @@ export function FeatureCourses() {
                 <BooksIcon className="text-danger size-36" />
               ) : (
                 <BookIcon className="text-danger size-36" />
-              );
+              )
             return (
               <div
                 className="bg-white p-4 rounded-4xl w-100"
@@ -116,10 +116,10 @@ export function FeatureCourses() {
                   <Button size={"default"}>Join Course Now</Button>
                 </div>
               </div>
-            );
+            )
           })}
         </section>
       </div>
     </section>
-  );
+  )
 }

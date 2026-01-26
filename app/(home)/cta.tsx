@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Cta() {
   return (
@@ -31,5 +31,5 @@ export function Cta() {
         />
       </div>
     </section>
-  );
+  )
 }

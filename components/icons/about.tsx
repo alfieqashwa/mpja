@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from "react"
 
 export const SecureIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -18,7 +18,7 @@ export const SecureIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="#E11D48"
     />
   </svg>
-);
+)
 
 export const PackageIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -42,7 +42,7 @@ export const PackageIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="#FC7884"
     />
   </svg>
-);
+)
 
 export const FileIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -62,7 +62,7 @@ export const FileIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="#FECDD3"
     />
   </svg>
-);
+)
 
 export const ProductDocumentsIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -102,7 +102,7 @@ export const ProductDocumentsIcon = (props: SVGProps<SVGSVGElement>) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
 export const CertificateIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -154,7 +154,7 @@ export const CertificateIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="#4A254B"
     />
   </svg>
-);
+)
 
 export const SmallCertificateIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
@@ -170,4 +170,4 @@ export const SmallCertificateIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="#64748B"
     />
   </svg>
-);
+)
