@@ -33,7 +33,7 @@ const QUICK_ACCESS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white kurt mt-24">
+    <footer className="border-t border-slate-200 bg-white kurt mt-24 px-20">
       <div className="flex justify-between">
         <div className="w-1/2 max-w-md">
           <div className="flex items-center space-x-3">
@@ -52,24 +52,29 @@ export function Footer() {
             and accessible education.
           </p>
         </div>
-        <div className="w-1/2">
-          <h4 className="font-bold text-primary text-lg">Quick Links</h4>
-          <ul className="space-y-4 text-secondary">
-            <li>
-              <a href="#">Courses</a>
-            </li>
-            <li>
-              <a href="#">Programs</a>
-            </li>
-            <li>
-              <a href="#">Certificates</a>
-            </li>
-          </ul>
+        <div className="w-1/2 grid grid-cols-4 gap-16">
+          {QUICK_ACCESS.map((q, i) => (
+            <section key={`${i}-${q.title}`}>
+              <h4 className="font-bold text-primary text-lg capitalize">
+                {q.title}
+              </h4>
+              <ul className="space-y-4 text-secondary pt-4">
+                {q.access.map((l, i) => (
+                  <li key={`${i}-${l.link}`}>
+                    <a href="#" className="whitespace-nowrap">
+                      {l.link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
         </div>
       </div>
 
-      <div className="mt-12 pt-8 border-t border-slate-200 text-center text-sm text-slate-400">
-        © 2025 MPJA Learning. All rights reserved.
+      <div className="pt-16 text-secondary flex justify-between pb-24">
+        <p>© {new Date().getFullYear()} MPJA Learning. All rights reserved.</p>
+        <p>Privacy Policy • Terms of Service</p>
       </div>
     </footer>
   );
