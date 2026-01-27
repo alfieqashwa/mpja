@@ -4,6 +4,7 @@ import { BooksIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { ArrowRightIcon, BookOpenIcon } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -42,13 +43,15 @@ export function Hero() {
               Explore courses <ArrowRightIcon />
             </Button>
 
-            <Button
-              variant="secondary"
-              size="xl"
-              className="hover:cursor-pointer"
-            >
-              Sign up free
-            </Button>
+            <Link href="/register">
+              <Button
+                variant="secondary"
+                size="xl"
+                className="hover:cursor-pointer"
+              >
+                Sign up free
+              </Button>
+            </Link>
           </div>
         </div>
 
