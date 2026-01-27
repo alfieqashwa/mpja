@@ -1,3 +1,5 @@
+import { CopyrightMpja } from "@/components/copyright"
+import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
 
 const QUICK_ACCESS = [
@@ -33,7 +35,7 @@ const QUICK_ACCESS = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white pt-24 px-20">
+    <footer className="pt-24 px-20">
       <div className="flex justify-between">
         <div className="w-1/2 max-w-md">
           <div className="flex items-center space-x-3">
@@ -72,10 +74,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="pt-16 text-secondary flex justify-between pb-24">
-        <p>© {new Date().getFullYear()} MPJA Learning. All rights reserved.</p>
-        <p>Privacy Policy • Terms of Service</p>
-      </div>
+      <Separator className="mt-16" />
+      <CopyrightMpja />
     </footer>
   )
 }
