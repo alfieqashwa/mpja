@@ -45,7 +45,7 @@ export function LoginForm() {
               id="email"
               placeholder="you@example.com"
               required
-              className="pl-10 text-lg text-secondary"
+              className="pl-10 text-xl font-medium placeholder:font-normal text-secondary"
             />
           </div>
         </section>
@@ -67,7 +67,7 @@ export function LoginForm() {
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"
               required
-              className="pl-10 text-lg text-secondary"
+              className="pl-10 text-lg font-medium tracking-widest placeholder:font-normal placeholder:tracking-normal text-secondary"
             />
             {togglePasswordButton}
           </div>
