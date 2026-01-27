@@ -26,7 +26,7 @@
 
 [x] Landing / Home Page
 
-[-] Sign-in / Sign-up
+[x] Auth Page (Login, Register, Forgot-password)
 
 [-] Dashboard
 
