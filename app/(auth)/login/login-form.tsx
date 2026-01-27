@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Eye, EyeOff, Link, Lock } from "lucide-react"
+import { Eye, EyeOff, Link as LinkIcon, Lock } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 export function LoginForm() {
@@ -35,7 +36,7 @@ export function LoginForm() {
             Email Address
           </Label>
           <div className="relative">
-            <Link
+            <LinkIcon
               size={20}
               strokeWidth={2.5}
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-primary"
@@ -78,7 +79,9 @@ export function LoginForm() {
               Remember me
             </Label>
           </section>
-          <p className="font-bold text-[#E11D48]">Forgot password?</p>
+          <Link href="/forgot-password" className="font-bold text-[#E11D48]">
+            Forgot password?
+          </Link>
         </div>
         <div className="pt-5">
           <Button type="submit" className="w-full">

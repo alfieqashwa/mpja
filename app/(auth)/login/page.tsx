@@ -1,6 +1,7 @@
 import { CopyrightMpja } from "@/components/copyright"
 import Image from "next/image"
 import { LoginForm } from "./login-form"
+import Link from "next/link"
 
 export default function LoginPage() {
   return (
@@ -27,9 +28,10 @@ export default function LoginPage() {
           <LoginForm />
           <p className="pt-8 text-lg space-x-2 text-center">
             <span className="text-secondary font-semibold">New to MPJA?</span>
-            <span className="text-[#E11D48] font-bold">Create an account</span>
+            <Link href="/register" className="text-[#E11D48] font-bold">
+              Create an account
+            </Link>
           </p>
-          <footer>{/* make reusable footer */}</footer>
         </div>
         <footer className="absolute w-full bottom-0 px-10">
           <CopyrightMpja />
