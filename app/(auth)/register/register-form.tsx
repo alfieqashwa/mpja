@@ -45,7 +45,11 @@ export function RegisterForm() {
         <p className="font-bold text-sm text-primary uppercase">Account Type</p>
         <div className="pt-2 flex space-x-2 justify-between">
           <section className="flex w-full space-x-2 border rounded-lg shadow-xs px-3 py-2">
-            <Checkbox id="individual" defaultChecked />
+            <Checkbox
+              id="individual"
+              defaultChecked
+              className="hover:cursor-pointer"
+            />
             <Label
               htmlFor="individual"
               className="font-bold text-sm text-primary capitalize"
@@ -54,7 +58,7 @@ export function RegisterForm() {
             </Label>
           </section>
           <section className="flex w-full space-x-2 border rounded-lg shadow-xs px-3 py-2">
-            <Checkbox id="company" />
+            <Checkbox id="company" className="hover:cursor-pointer" />
             <Label
               htmlFor="company"
               className="font-bold text-sm text-primary capitalize"

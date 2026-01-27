@@ -74,7 +74,12 @@ export function LoginForm() {
         </section>
         <div className="flex items-center justify-between pt-2">
           <section className="flex items-center space-x-2">
-            <Checkbox id="remember-me" name="remember-me" />
+            <Checkbox
+              id="remember-me"
+              name="remember-me"
+              defaultChecked
+              className="hover:cursor-pointer"
+            />
             <Label htmlFor="remember-me" className="font-semibold text-primary">
               Remember me
             </Label>
