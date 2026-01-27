@@ -1,5 +1,6 @@
 "use client"
 
+import { WrapperContainer } from "@/components/wrapper-container"
 import { AboutUs } from "./about-us"
 import { Cta } from "./cta"
 import { Faq } from "./faq"
@@ -12,20 +13,22 @@ import { Testimonials } from "./testimonials"
 
 export default function Home() {
   return (
-    <div className="bg-white relative">
-      <Navbar />
+    <WrapperContainer>
+      <div className="bg-white relative">
+        <Navbar />
 
-      <main className="space-y-24">
-        <Hero />
-        <AboutUs />
-        <FeatureCourses />
-        <LearningJourney />
-        <Testimonials />
-        <Faq />
-        <Cta />
-      </main>
+        <main className="space-y-24">
+          <Hero />
+          <AboutUs />
+          <FeatureCourses />
+          <LearningJourney />
+          <Testimonials />
+          <Faq />
+          <Cta />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </WrapperContainer>
   )
 }
