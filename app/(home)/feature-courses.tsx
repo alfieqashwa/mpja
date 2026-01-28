@@ -45,7 +45,7 @@ export function FeatureCourses() {
             },
             {
               id: "card_3",
-              title: "Halal Japan Biginner Course",
+              title: "Halal Japan Beginner Course",
               description: "177 Student | Certification",
               lessonCount: 5,
               lessonCourse: "book",
@@ -89,7 +89,7 @@ export function FeatureCourses() {
                 </div>
                 {/* CTA */}
                 <div className="flex mt-5 justify-between items-start">
-                  <article className="space-y-2">
+                  <article className="space-y-2 text-left">
                     <h3 className="text-2xl font-bold text-primary whitespace-nowrap">
                       {card.title}
                     </h3>
@@ -99,6 +99,7 @@ export function FeatureCourses() {
                   </article>
                   <Heart
                     className={cn(
+                      "cursor-pointer",
                       card.isLove
                         ? "text-[#E11D48] fill-[#E11D48]"
                         : "text-primary bg-transparent",
