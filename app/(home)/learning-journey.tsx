@@ -105,9 +105,9 @@ function CourseCompleteCard() {
       <div className="my-6 h-0.5 w-full bg-[linear-gradient(to_right,#e2e8f0_50%,transparent_50%)] bg-size-[24px_2px] bg-repeat-x"></div>
 
       <div className="flex justify-between items-center w-full">
-        <button className="flex items-center gap-2 text-lg font-bold text-[#E11D48] transition-colors cursor-pointer">
+        <button className="flex items-center gap-2 text-lg font-bold text-rose-600 transition-colors cursor-pointer">
           See All Detail
-          <ArrowRightIcon className="text-[#E11D48]" />
+          <ArrowRightIcon className="text-rose-600" />
         </button>
       </div>
     </div>
@@ -128,7 +128,7 @@ function EnrollCard() {
           <p className="text-xs text-secondary">19 December 2025 19:10</p>
           <p className="text-xl font-bold text-danger">¥7,000</p>
         </div>
-        <div className="shrink-0 text-sm font-bold text-[#E11D48]">
+        <div className="shrink-0 text-sm font-bold text-rose-600">
           See All Detail
         </div>
       </div>
@@ -143,7 +143,7 @@ function EnrollCard() {
           <p className="text-xs text-secondary">19 December 2025 19:10</p>
           <p className="text-xl font-bold text-danger">¥7,000</p>
         </div>
-        <div className="shrink-0 text-sm font-bold text-[#E11D48]">
+        <div className="shrink-0 text-sm font-bold text-rose-600">
           See All Detail
         </div>
       </div>
@@ -164,7 +164,7 @@ function LearningProgressCard() {
             See your active courses, progress, and what to learn next
           </p>
         </article>
-        <span className="font-bold text-[#E11D48] cursor-pointer">
+        <span className="font-bold text-rose-600 cursor-pointer">
           View all courses
         </span>
       </div>
@@ -279,9 +279,9 @@ function CertificationCard() {
       <div className="my-6 h-0.5 w-full bg-[linear-gradient(to_right,#e2e8f0_50%,transparent_50%)] bg-size-[24px_2px] bg-repeat-x"></div>
 
       <div className="flex justify-between items-center w-full">
-        <button className="flex items-center gap-2 text-lg font-bold text-[#E11D48] transition-colors cursor-pointer">
+        <button className="flex items-center gap-2 text-lg font-bold text-rose-600 transition-colors cursor-pointer">
           See All Detail
-          <ArrowRightIcon className="text-[#E11D48]" />
+          <ArrowRightIcon className="text-rose-600" />
         </button>
       </div>
     </div>

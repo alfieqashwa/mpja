@@ -97,7 +97,7 @@ export function FeatureCourses() {
                   }}
                 >
                   <div className="absolute top-0 left-0 bg-[#FECDD3] p-2 rounded-br-md rounded-tl-md">
-                    <p className="flex space-x-1 text-[#E11D48] font-semibold">
+                    <p className="flex space-x-1 text-rose-600 font-semibold">
                       <Link size={20} />
                       <span>{card.lessonCount} Lesson</span>
                     </p>
@@ -119,7 +119,7 @@ export function FeatureCourses() {
                     className={cn(
                       "cursor-pointer transition-all duration-200 hover:scale-110",
                       isLiked
-                        ? "text-[#E11D48] fill-[#E11D48]"
+                        ? "text-rose-600 fill-rose-600"
                         : "text-primary bg-transparent",
                     )}
                   />

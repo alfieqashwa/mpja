@@ -39,7 +39,7 @@ export function AboutUs() {
                 { title: "Structured Learning", count: "100%" },
               ].map((impact, idx) => (
                 <div className="text-center" key={`${impact}-${idx}`}>
-                  <p className="text-6xl font-semibold text-[#E11D48]">
+                  <p className="text-6xl font-semibold text-rose-600">
                     {impact.count}
                   </p>
                   <p className="text-secondary">{impact.title}</p>

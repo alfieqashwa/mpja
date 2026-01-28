@@ -84,7 +84,7 @@ export function LoginForm() {
               Remember me
             </Label>
           </section>
-          <Link href="/forgot-password" className="font-bold text-[#E11D48]">
+          <Link href="/forgot-password" className="font-bold text-rose-600">
             Forgot password?
           </Link>
         </div>

@@ -35,7 +35,7 @@ export default function LoginPage() {
                 <span className="text-secondary font-semibold">
                   New to MPJA?
                 </span>
-                <Link href="/register" className="text-[#E11D48] font-bold">
+                <Link href="/register" className="text-rose-600 font-bold">
                   Create an account
                 </Link>
               </p>

@@ -22,7 +22,7 @@ export function Hero() {
             <span className="inline-flex size-15 mx-3 items-center justify-center rounded-2xl bg-rose-600 shadow-lg shadow-rose-200">
               <BooksIcon className="size-8 text-white" />
             </span>
-            <span className="text-[#E11D48]">Professional Skills</span>
+            <span className="text-rose-600">Professional Skills</span>
           </h1>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:leading-[1.1]">
             at your own pace
