@@ -75,7 +75,7 @@ export function Footer() {
       </div>
 
       <Separator className="mt-16" />
-      <CopyrightMpja />
+      <CopyrightMpja className="py-6" />
     </footer>
   )
 }
