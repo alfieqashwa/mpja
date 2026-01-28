@@ -7,7 +7,7 @@ import {
 
 export function Testimonials() {
   return (
-    <section id="testimonials">
+    <section id="testimony">
       <article className="text-center">
         <SectionTitle title="testimony" />
         <SectionSubTitle title="Success Stories" />

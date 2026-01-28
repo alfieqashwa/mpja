@@ -15,7 +15,7 @@ const navLinks: NavLinks[] = [
   { name: "Home", href: "#home" },
   { name: "About Us", href: "#about" },
   { name: "Course", href: "#course" },
-  { name: "Testimony", href: "#testimonials" },
+  { name: "Testimony", href: "#testimony" },
   { name: "Works", href: "#works" },
   { name: "Help", href: "#help" },
 ]
@@ -24,10 +24,10 @@ export function Navbar() {
   const active = useActiveSection()
 
   return (
-    <header className="fixed top-0 left-1/2 -translate-x-1/2 w-355 z-99 backdrop-blur-lg">
+    <header className="fixed top-0 left-1/2 -translate-x-1/2 z-99 w-full max-w-355">
       <div className="mt-9 mx-18">
         {/* Floating Pill Navbar */}
-        <nav className="flex items-center justify-between gap-4 rounded-2xl bg-white px-6 py-3 shadow-sm border border-slate-100">
+        <nav className="flex items-center justify-between gap-4 rounded-2xl bg-white px-2 pr-4 py-2 shadow-sm border border-slate-100/60 backdrop-blur-md">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="size-16 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -48,10 +48,10 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 text-lg font-medium transition-colors rounded-full whitespace-nowrap",
+                  "px-4 py-2.5 text-base font-medium transition-all rounded-lg whitespace-nowrap",
                   link.name.toLowerCase() === active
-                    ? "text-[#E11D48] font-semibold"
-                    : "text-secondary hover:text-[#E11D48] hover:font-semibold",
+                    ? "text-rose-600 font-semibold bg-rose-50"
+                    : "text-secondary hover:text-secondary hover:font-semibold hover:bg-slate-50",
                 )}
               >
                 {link.name}
@@ -62,15 +62,15 @@ export function Navbar() {
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link href="/login">
-              <Button size="lg" className="hover:cursor-pointer">
+              <Button size="lg" className="cursor-pointer">
                 Login
               </Button>
             </Link>
             <Link href="/register">
               <Button
-                variant="secondary"
+                variant={"secondary"}
                 size="lg"
-                className="border-rose-500 text-rose-500 hover:bg-rose-50 hover:cursor-pointer"
+                className="cursor-pointer"
               >
                 Sign up
               </Button>
