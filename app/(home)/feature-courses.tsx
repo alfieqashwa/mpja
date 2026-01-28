@@ -63,7 +63,7 @@ export function FeatureCourses() {
               )
             return (
               <div
-                className="bg-white p-4 rounded-4xl w-100"
+                className="bg-white p-4 rounded-4xl w-full"
                 key={`${idx}-${card.id}`}
               >
                 {/* Image Frame */}
