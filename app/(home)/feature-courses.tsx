@@ -2,12 +2,42 @@ import { BookIcon, BookOpenIcon, BooksIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Heart, Link } from "lucide-react"
+import { useState } from "react"
 import {
   SectionDescription,
   SectionSubTitle,
   SectionTitle,
 } from "./section-title"
-import { useState } from "react"
+
+const CARD_LIST = [
+  {
+    id: "card_1",
+    title: "Halal Indonesian",
+    description: "177 Student | Certification",
+    lessonCount: 7,
+    lessonCourse: "open-book",
+    price: 7_000,
+    isLove: false,
+  },
+  {
+    id: "card_2",
+    title: "Halal Supervisor",
+    description: "177 Student | Certification",
+    lessonCount: 9,
+    lessonCourse: "books",
+    price: 8_000,
+    isLove: true,
+  },
+  {
+    id: "card_3",
+    title: "Halal Japan Beginner Course",
+    description: "177 Student | Certification",
+    lessonCount: 5,
+    lessonCourse: "book",
+    price: 12_000,
+    isLove: false,
+  },
+]
 
 export function FeatureCourses() {
   const [likedCards, setLikedCards] = useState<Record<string, boolean>>({
@@ -38,35 +68,7 @@ export function FeatureCourses() {
         {/* Card List */}
         <section className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Card */}
-          {[
-            {
-              id: "card_1",
-              title: "Halal Indonesian",
-              description: "177 Student | Certification",
-              lessonCount: 7,
-              lessonCourse: "open-book",
-              price: 7_000,
-              isLove: false,
-            },
-            {
-              id: "card_2",
-              title: "Halal Supervisor",
-              description: "177 Student | Certification",
-              lessonCount: 9,
-              lessonCourse: "books",
-              price: 8_000,
-              isLove: true,
-            },
-            {
-              id: "card_3",
-              title: "Halal Japan Beginner Course",
-              description: "177 Student | Certification",
-              lessonCount: 5,
-              lessonCourse: "book",
-              price: 12_000,
-              isLove: false,
-            },
-          ].map((card, idx) => {
+          {CARD_LIST.map((card, idx) => {
             const isLiked = likedCards[card.id]
             const featureIcon =
               card.lessonCourse === "open-book" ? (
