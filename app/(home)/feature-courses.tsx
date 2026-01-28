@@ -7,8 +7,22 @@ import {
   SectionSubTitle,
   SectionTitle,
 } from "./section-title"
+import { useState } from "react"
 
 export function FeatureCourses() {
+  const [likedCards, setLikedCards] = useState<Record<string, boolean>>({
+    card_1: false,
+    card_2: true, // Based on your supervisor card being true
+    card_3: false,
+  })
+
+  const toggleHeart = (id: string) => {
+    setLikedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }))
+  }
+
   return (
     <section
       id="course"
@@ -53,6 +67,7 @@ export function FeatureCourses() {
               isLove: false,
             },
           ].map((card, idx) => {
+            const isLiked = likedCards[card.id]
             const featureIcon =
               card.lessonCourse === "open-book" ? (
                 <BookOpenIcon className="text-danger size-36" />
@@ -98,9 +113,10 @@ export function FeatureCourses() {
                     </p>
                   </article>
                   <Heart
+                    onClick={() => toggleHeart(card.id)}
                     className={cn(
-                      "cursor-pointer",
-                      card.isLove
+                      "cursor-pointer transition-all duration-200 hover:scale-110",
+                      isLiked
                         ? "text-[#E11D48] fill-[#E11D48]"
                         : "text-primary bg-transparent",
                     )}
