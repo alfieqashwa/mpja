@@ -26,7 +26,7 @@ export function LoginForm() {
   )
 
   return (
-    <div className="w-full pt-8 max-w-md">
+    <div className="pt-8">
       <form>
         <section className="space-y-2">
           <Label

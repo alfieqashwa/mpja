@@ -40,7 +40,7 @@ export function RegisterForm() {
   )
 
   return (
-    <div className="w-full pt-8 max-w-md">
+    <div className="pt-8">
       <form>
         <p className="font-bold text-sm text-primary uppercase">Account Type</p>
         <div className="pt-2 flex space-x-2 justify-between">

@@ -1,14 +1,15 @@
 import { CopyrightMpja } from "@/components/copyright"
-import { WrapperContainer } from "@/components/wrapper-container"
 import Image from "next/image"
 import { RegisterForm } from "./register-form"
 
 export default function RegisterPage() {
   return (
-    <WrapperContainer>
-      <div className="min-h-screen grid lg:grid-cols-2">
-        <div className="relative">
-          <div className="absolute top-12 left-1/2 -translate-x-1/2">
+    <div className="min-h-screen w-full">
+      <div className="h-screen grid lg:grid-cols-2">
+        {/* Left Column */}
+        <div className="flex flex-col h-full relative overflow-y-auto">
+          {/* Logo - Centered at top */}
+          <div className="flex justify-center pt-10">
             <Image
               src="/img/logo.png"
               alt="MPJA Logo"
@@ -18,25 +19,28 @@ export default function RegisterPage() {
             />
           </div>
 
-          {/* Register form */}
-          <div className="mx-auto w-full max-w-xl mt-47">
-            <article className="text-center space-y-3">
-              <h1 className="text-5xl font-bold text-primary">
-                Create your MPJA account
-              </h1>
-              <p className="text-2xl font-semibold text-secondary">
-                Save your progress, access quizzes, and earn certificates.
-              </p>
-            </article>
-            <RegisterForm />
+          {/* Form Content */}
+          <div className="grow flex items-center justify-center px-10 py-12">
+            <div className="w-full max-w-xl">
+              <article className="text-center space-y-3 mb-10">
+                <h1 className="text-5xl font-bold text-primary leading-tight">
+                  Create your MPJA account
+                </h1>
+                <p className="text-2xl font-semibold text-secondary">
+                  Save your progress, access quizzes, and earn certificates.
+                </p>
+              </article>
+              <RegisterForm />
+            </div>
           </div>
 
-          <footer className="absolute w-full bottom-0 px-10">
+          <footer className="pb-10 px-10 text-center">
             <CopyrightMpja />
           </footer>
         </div>
 
-        <div className="relative hidden lg:block h-full w-full">
+        {/* Right Column */}
+        <div className="relative hidden lg:block h-full">
           <Image
             src="/img/auth-img.png"
             alt="Preview"
@@ -46,6 +50,6 @@ export default function RegisterPage() {
           />
         </div>
       </div>
-    </WrapperContainer>
+    </div>
   )
 }

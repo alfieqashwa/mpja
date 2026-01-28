@@ -1,5 +1,5 @@
 export const CopyrightMpja = () => (
-  <div className="text-secondary flex justify-between py-6">
+  <div className="text-secondary flex justify-between">
     <p className="whitespace-nowrap">
       © {new Date().getFullYear()} MPJA Learning. All rights reserved.
     </p>
