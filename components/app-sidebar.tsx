@@ -33,6 +33,7 @@ import {
   SidebarUserIcon,
   SidebarUserSolidIcon,
 } from "./custom-icons"
+import { LogOut } from "lucide-react"
 
 const group1 = [
   {
@@ -153,7 +154,27 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>Footer / User</SidebarFooter>
+      <SidebarFooter className="bottom-6 absolute">
+        <div className="bg-[#F8FAFC] flex w-full gap-2 flex-row justify-between items-center">
+          <Image
+            src="/img/avatar.png"
+            alt="User Avatar"
+            width={32}
+            height={32}
+            priority
+            className="object-cover"
+          />
+          <article className="w-30">
+            <p className="font-semibold text-xs text-[#0F172A] whitespace-nowrap truncate">
+              Daenar Kurniawan
+            </p>
+            <p className="text-[#64748B] text-[10px] whitespace-nowrap truncate">
+              daenaraji@gmail.com
+            </p>
+          </article>
+          <LogOut size={16} className="text[#64748B]" />
+        </div>
+      </SidebarFooter>
     </Sidebar>
   )
 }
