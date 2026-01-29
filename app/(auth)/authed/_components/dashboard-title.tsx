@@ -5,7 +5,7 @@ export const DashboardTitle = ({
   title: string
   subTitle: string
 }) => (
-  <article className="space-y-2 pb-6">
+  <article className="space-y-2">
     <h2 className="font-bold text-primary text-2xl">{title}</h2>
     <p className="font-medium text-secondary">{subTitle}</p>
   </article>
