@@ -172,7 +172,7 @@ export function AppSidebar() {
               daenaraji@gmail.com
             </p>
           </article>
-          <LogOut size={16} className="text[#64748B]" />
+          <LogOut size={16} className="text-[#64748B]" />
         </div>
       </SidebarFooter>
     </Sidebar>

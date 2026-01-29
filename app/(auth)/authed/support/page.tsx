@@ -1,9 +1,9 @@
-import { HeaderDashboard } from "../_components/header-dashboard"
+import { DashboardHeader } from "../_components/dashboard-header"
 
 export default function PreferencesPage() {
   return (
     <div>
-      <HeaderDashboard title="preferences" />
+      <DashboardHeader title="preferences" />
     </div>
   )
 }

@@ -1,9 +1,9 @@
-import { HeaderDashboard } from "../_components/header-dashboard"
+import { DashboardHeader } from "../_components/dashboard-header"
 
 export default function Transactionpage() {
   return (
     <div>
-      <HeaderDashboard title="transaction" />
+      <DashboardHeader title="transaction" />
     </div>
   )
 }
