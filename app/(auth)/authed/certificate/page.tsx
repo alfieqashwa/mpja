@@ -1,9 +1,9 @@
 import { HeaderDashboard } from "../_components/header-dashboard"
 
-export default function DashboardPage() {
+export default function CertificatePage() {
   return (
     <div>
-      <HeaderDashboard title="dashboard" />
+      <HeaderDashboard title="certificate" />
     </div>
   )
 }

@@ -9,8 +9,8 @@ export default function AuthedLayout({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
-        <SidebarTrigger />
+      <main className="bg-slate-50 w-full min-h-screen">
+        {/* <SidebarTrigger /> */}
         {children}
       </main>
     </SidebarProvider>

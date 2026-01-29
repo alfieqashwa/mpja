@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Sidebar,
   SidebarContent,
@@ -11,63 +13,90 @@ import {
   SidebarMenuItem,
   SidebarSeparator,
 } from "@/components/ui/sidebar"
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import {
+  SidebarCertificateIcon,
+  SidebarCertificateSolidIcon,
+  SidebarCourseIcon,
+  SidebarCourseSolidIcon,
+  SidebarDashboardIcon,
+  SidebarDashboardSolidIcon,
+  SidebarPreferencesIcon,
+  SidebarPreferencesSolidIcon,
+  SidebarSupportIcon,
+  SidebarSupportSolidIcon,
+  SidebarTransactionIcon,
+  SidebarTransactionSolidIcon,
+  SidebarUserIcon,
+  SidebarUserSolidIcon,
+} from "./custom-icons"
 
 const group1 = [
   {
     title: "Dashboard",
     url: "/authed/dashboard",
-    icon: Home,
+    icon: <SidebarDashboardIcon />,
+    iconSolid: <SidebarDashboardSolidIcon />,
   },
   {
     title: "Course",
     url: "/authed/course",
-    icon: Inbox,
+    icon: <SidebarCourseIcon />,
+    iconSolid: <SidebarCourseSolidIcon />,
   },
   {
     title: "Certificate",
     url: "/authed/certificate",
-    icon: Calendar,
+    icon: <SidebarCertificateIcon />,
+    iconSolid: <SidebarCertificateSolidIcon />,
   },
   {
     title: "Transaction",
     url: "/authed/transaction",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "/authed/settings",
-    icon: Settings,
+    icon: <SidebarTransactionIcon />,
+    iconSolid: <SidebarTransactionSolidIcon />,
   },
 ]
 
 const group2 = [
   {
     title: "Preferences",
-    url: "/authed/settings",
-    icon: Home,
+    url: "/authed/preferences",
+    icon: <SidebarPreferencesIcon />,
+    iconSolid: <SidebarPreferencesSolidIcon />,
   },
   {
     title: "Help & Support",
     url: "/authed/support",
-    icon: Inbox,
+    icon: <SidebarSupportIcon />,
+    iconSolid: <SidebarSupportSolidIcon />,
   },
   {
     title: "User",
-    url: "/authed/profile",
-    icon: Calendar,
+    url: "/authed/user",
+    icon: <SidebarUserIcon />,
+    iconSolid: <SidebarUserSolidIcon />,
   },
 ]
 
 export function AppSidebar() {
+  const pathname = usePathname()
   return (
-    <Sidebar collapsible="icon">
-      <SidebarHeader>
-        <h2>
-          <span>LOGO</span>
-          <span>MPJA Learning</span>
-        </h2>
+    <Sidebar collapsible="none">
+      <SidebarHeader className="bg-white h-14 p-3">
+        <div className="flex items-center gap-1">
+          <Image
+            src="/img/logo.png"
+            alt="MPJA"
+            width={41}
+            height={33}
+            priority
+          />
+          <span className="font-bold text-lg">MPJA Learning</span>
+        </div>
       </SidebarHeader>
       <SidebarSeparator />
       <SidebarContent>
@@ -78,9 +107,18 @@ export function AppSidebar() {
               {group1.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                    <Link
+                      href={item.url}
+                      className={cn(
+                        pathname === item.url
+                          ? "text-rose-600"
+                          : "text-secondary",
+                      )}
+                    >
+                      {pathname === item.url ? item.iconSolid : item.icon}
+                      <span className="font-semibold text-sm">
+                        {item.title}
+                      </span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -95,9 +133,18 @@ export function AppSidebar() {
               {group2.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                    <Link
+                      href={item.url}
+                      className={cn(
+                        pathname === item.url
+                          ? "text-rose-600"
+                          : "text-secondary",
+                      )}
+                    >
+                      {pathname === item.url ? item.iconSolid : item.icon}
+                      <span className="font-semibold text-sm">
+                        {item.title}
+                      </span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

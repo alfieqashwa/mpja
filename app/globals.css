@@ -83,12 +83,16 @@
   --chart-4: #f59e0b;
   --chart-5: #ef4444;
 
-  --sidebar: oklch(0.985 0 0);
+  /* --sidebar: oklch(0.985 0 0); */
+  --sidebar: #ffffff;
+
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
+  /* --sidebar-accent: oklch(0.97 0 0); */
+  --sidebar-accent: #fdf2f8;
+  /* --sidebar-accent-foreground: oklch(0.205 0 0); */
+  --sidebar-accent-foreground: #e11d48;
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
