@@ -14,6 +14,7 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils"
+import { LogOut } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -33,7 +34,6 @@ import {
   SidebarUserIcon,
   SidebarUserSolidIcon,
 } from "./custom-icons"
-import { LogOut } from "lucide-react"
 
 const group1 = [
   {
@@ -88,7 +88,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible="none">
       <SidebarHeader className="bg-white h-14 p-3">
-        <div className="flex items-center gap-1">
+        <Link href="/" className="flex items-center gap-1">
           <Image
             src="/img/logo.png"
             alt="MPJA"
@@ -97,7 +97,7 @@ export function AppSidebar() {
             priority
           />
           <span className="font-bold text-lg">MPJA Learning</span>
-        </div>
+        </Link>
       </SidebarHeader>
       <SidebarSeparator />
       <SidebarContent>
