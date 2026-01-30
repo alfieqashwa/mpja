@@ -5,32 +5,34 @@ import { BellRing, Search } from "lucide-react"
 import Image from "next/image"
 
 export const DashboardHeader = ({ title }: { title: string }) => (
-  <div className="bg-white h-14.25 px-4 flex justify-between items-center border-b-2">
-    {/* Title */}
-    <h2 className="text-primary capitalize font-bold text-lg">{title}</h2>
-    <div className="gap-5 flex items-center">
-      {/* Search Input */}
-      <div className="relative">
-        <div>
-          <Search
-            size={20}
-            className="absolute left-3 top-1/2 -translate-y-1/2"
+  <div className="fixed left-60 right-0 z-99">
+    <div className="bg-white h-14.25 px-4 flex justify-between items-center border-b-2">
+      {/* Title */}
+      <h2 className="text-primary capitalize font-bold text-lg">{title}</h2>
+      <div className="gap-5 flex items-center">
+        {/* Search Input */}
+        <div className="relative">
+          <div>
+            <Search
+              size={20}
+              className="absolute left-3 top-1/2 -translate-y-1/2"
+            />
+          </div>
+          <Input
+            className="w-116 text-secondary text-sm pl-10 pr-4"
+            placeholder={`Search your course`}
           />
         </div>
-        <Input
-          className="w-116 text-secondary text-sm pl-10 pr-4"
-          placeholder={`Search your course`}
-        />
+        {/* Notification  */}
+        <div className="border rounded-sm relative size-8">
+          <BellRing
+            size={16}
+            className="absolute top-1/2 -translate-y-1/2 right-0 -translate-x-1/2"
+          />
+        </div>
+        {/* Avatar */}
+        <UserAvatar />
       </div>
-      {/* Notification  */}
-      <div className="border rounded-sm relative size-8">
-        <BellRing
-          size={16}
-          className="absolute top-1/2 -translate-y-1/2 right-0 -translate-x-1/2"
-        />
-      </div>
-      {/* Avatar */}
-      <UserAvatar />
     </div>
   </div>
 )

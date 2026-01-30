@@ -1,5 +1,5 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 export default function AuthedLayout({
   children,
@@ -7,9 +7,9 @@ export default function AuthedLayout({
   children: React.ReactNode
 }) {
   return (
-    <SidebarProvider>
+    <SidebarProvider className="h-screen overflow-hidden">
       <AppSidebar />
-      <main className="bg-slate-50 w-full min-h-screen">
+      <main className="bg-slate-50 flex-1 overflow-auto">
         {/* <SidebarTrigger /> */}
         {children}
       </main>
