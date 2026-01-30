@@ -151,15 +151,17 @@ export function CourseCard({
   )
 }
 
+type CourseCategoryInfoProps = {
+  category: CategoryCourse
+  dueDate: string
+  price: number
+}
+
 const CourseCategoryInfo = ({
   category,
   dueDate,
   price,
-}: {
-  category: CategoryCourse
-  dueDate: string
-  price: number
-}) => {
+}: CourseCategoryInfoProps) => {
   if (category === "wishlist")
     return (
       <p className="text-2xl text-danger font-bold">
