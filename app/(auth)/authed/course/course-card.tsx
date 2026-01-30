@@ -51,13 +51,6 @@ export function CourseCard({
 }: Course) {
   const [likedCard, setLikedCard] = useState(isLiked)
 
-  // const isLiked = likedCards[courseId]
-
-  const toggleHeart = (id: number, isLiked: boolean) => {
-    console.log(id)
-    console.log(isLiked)
-  }
-
   return (
     <div id={courseId.toString()} className="bg-white p-4 rounded-2xl w-full">
       {/* Image Frame */}
