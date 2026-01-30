@@ -154,7 +154,7 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter className="bottom-6 absolute">
+      <SidebarFooter className="bottom-4 left-1 fixed">
         <div className="bg-[#F8FAFC] flex w-full gap-2 flex-row justify-between items-center">
           <Image
             src="/img/avatar.png"
