@@ -65,7 +65,7 @@ export default function DashboardPage() {
           {CARDS.map((card, idx) => (
             <DashboardCard
               name={card.name}
-              value={card.value}
+              value={showCourses ? card.value : "0"}
               bgIconColor={card.bgIconColor}
               key={`${idx}-${card.name}`}
             >
