@@ -1,5 +1,3 @@
-"use client"
-
 import { BookOpenIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -14,7 +12,11 @@ import {
 import Link from "next/link"
 import { useState } from "react"
 
-type CategoryCourse = "not-started" | "on-going" | "completed" | "wishlist"
+export type CategoryCourse =
+  | "not-started"
+  | "on-going"
+  | "completed"
+  | "wishlist"
 
 export type Course = {
   courseId: number
