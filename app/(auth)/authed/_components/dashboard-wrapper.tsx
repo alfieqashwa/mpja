@@ -1,5 +1,13 @@
+import { cn } from "@/lib/utils"
+
 export const DashboardWrapper = ({
+  className,
   children,
 }: {
+  className?: string
   children: React.ReactNode
-}) => <div className="px-6 py-7 space-y-6 max-w-7xl">{children}</div>
+}) => (
+  <div className={cn("px-6 py-7 space-y-6 max-w-7xl", className)}>
+    {children}
+  </div>
+)
