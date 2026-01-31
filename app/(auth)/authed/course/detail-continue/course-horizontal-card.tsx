@@ -80,7 +80,7 @@ export const CourseHorizontalCard = () => (
           </section>
         </article>
       </div>
-      <Link href="/course/halal">
+      <Link href="/authed/course/halal">
         <Button className="cursor-pointer">Continue</Button>
       </Link>
     </div>

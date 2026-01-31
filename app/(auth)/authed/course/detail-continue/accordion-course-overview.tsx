@@ -52,7 +52,7 @@ const COURSE_OVERVIEW = [
 export const AccordionCourseOverview = () => (
   <div className="p-5 border shadow-sm bg-white rounded-2xl">
     <h3 className="text-2xl font-bold text-primary">Course Overview</h3>
-    <Accordion type="multiple" className="" defaultValue={["question-1"]}>
+    <Accordion type="multiple" className="pt-5" defaultValue={["question-1"]}>
       {COURSE_OVERVIEW.map((q, idx) => (
         <AccordionItem
           value={q.value}
