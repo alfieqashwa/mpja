@@ -11,7 +11,9 @@ export const BreadcumbDetailCourse = () => (
   <Breadcrumb>
     <BreadcrumbList className="text-rose-600 font-bold">
       <BreadcrumbItem>
-        <BreadcrumbLink href="/authed/course">Course</BreadcrumbLink>
+        <BreadcrumbLink href="/authed/course" className="hover:text-danger">
+          Course
+        </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>

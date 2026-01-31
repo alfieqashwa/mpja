@@ -9,7 +9,7 @@ import { CourseHorizontalCard } from "../course-horizontal-card"
 import { DetailInfo } from "../detail-info"
 import { Overview } from "../overview"
 
-export default function DetailCompletedPage() {
+export default function DetailWishlistPage() {
   return (
     <div>
       <DashboardHeader title="Course" />
@@ -18,22 +18,14 @@ export default function DetailCompletedPage() {
         <BreadcumbDetailCourse />
         {/* Course Card */}
         <CourseHorizontalCard
-          button={
-            <section className="space-x-3">
-              <Button className="cursor-pointer">View All Material</Button>
-              <Button variant={"secondary"} className="cursor-pointer">
-                Download Certificates
-              </Button>
-            </section>
-          }
+          button={<Button className="cursor-pointer">Buy This Course</Button>}
         />
-
         <div className="flex justify-between gap-6">
           <section className="space-y-6 w-3/4">
             {/* Overview */}
             <Overview />
             {/* Accordion Course Overview */}
-            <AccordionCourseOverview />
+            <AccordionCourseOverview isWishlist={true} />
           </section>
           {/* Detail Information */}
           <DetailInfo />

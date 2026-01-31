@@ -2,13 +2,7 @@ import { BookOpenIcon, ChartBarIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
-import {
-  BookOpen,
-  ChartNoAxesColumnIncreasing,
-  Heart,
-  Medal,
-  ScrollText,
-} from "lucide-react"
+import { BookOpen, Heart, Medal, ScrollText } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 

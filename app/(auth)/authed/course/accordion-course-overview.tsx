@@ -1,4 +1,4 @@
-import { SmallBookIcon } from "@/components/custom-icons"
+import { LockSolidIcon, SmallBookIcon } from "@/components/custom-icons"
 import {
   Accordion,
   AccordionContent,
@@ -49,7 +49,11 @@ const COURSE_OVERVIEW = [
   },
 ]
 
-export const AccordionCourseOverview = () => (
+export const AccordionCourseOverview = ({
+  isWishlist = false,
+}: {
+  isWishlist?: boolean
+}) => (
   <div className="p-5 border shadow-sm bg-white rounded-2xl">
     <h3 className="text-2xl font-bold text-primary">Course Overview</h3>
     <Accordion type="multiple" className="pt-5" defaultValue={["question-1"]}>
@@ -78,10 +82,14 @@ export const AccordionCourseOverview = () => (
                       {a.title}
                     </span>
                   </article>
-                  <CircleCheck
-                    size={24}
-                    className="text-white fill-[#22C55E]"
-                  />
+                  {isWishlist ? (
+                    <LockSolidIcon className="size-6 text-[#64748B]" />
+                  ) : (
+                    <CircleCheck
+                      size={24}
+                      className="text-white fill-[#22C55E]"
+                    />
+                  )}
                 </li>
               ))}
             </ul>

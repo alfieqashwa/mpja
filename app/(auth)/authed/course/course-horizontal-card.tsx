@@ -4,12 +4,14 @@ import {
   ChartBarIcon,
   CrownIcon,
 } from "@/components/custom-icons"
-import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { BookOpen, ScrollText } from "lucide-react"
-import Link from "next/link"
 
-export const CourseHorizontalCard = () => (
+export const CourseHorizontalCard = ({
+  button,
+}: {
+  button: React.ReactNode
+}) => (
   <div className="bg-white px-4 py-6 rounded-2xl flex space-x-5 border shadow-sm">
     <div
       className="relative flex aspect-video items-center w-1/4 justify-center rounded-xl bg-[#FFF1F2]"
@@ -80,9 +82,7 @@ export const CourseHorizontalCard = () => (
           </section>
         </article>
       </div>
-      <Link href="/authed/course/halal">
-        <Button className="cursor-pointer">Continue</Button>
-      </Link>
+      {button}
     </div>
   </div>
 )
