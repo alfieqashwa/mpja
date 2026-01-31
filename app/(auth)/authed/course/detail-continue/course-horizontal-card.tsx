@@ -4,8 +4,10 @@ import {
   ChartBarIcon,
   CrownIcon,
 } from "@/components/custom-icons"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { BookOpen, ScrollText } from "lucide-react"
+import Link from "next/link"
 
 export const CourseHorizontalCard = () => (
   <div className="bg-white px-4 py-6 rounded-2xl flex space-x-5 border shadow-sm">
@@ -64,7 +66,7 @@ export const CourseHorizontalCard = () => (
           <section className="flex items-center gap-1 justify-center">
             <CrownIcon className="text-secondary size-4" />
             <p className="text-primary text-sm font-bold whitespace-nowrap">
-              <span>10</span>/<span>13</span>
+              Reyhan Kuswara
             </p>
           </section>
         </article>
@@ -78,6 +80,9 @@ export const CourseHorizontalCard = () => (
           </section>
         </article>
       </div>
+      <Link href="/course/halal">
+        <Button className="cursor-pointer">Continue</Button>
+      </Link>
     </div>
   </div>
 )
