@@ -42,8 +42,8 @@ function AccordionTrigger({
       >
         {children}
         <span className="relative flex size-4 shrink-0 items-center justify-center text-muted-foreground">
-          <Plus className="absolute top-2 size-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
-          <Minus className="absolute top-2 size-4 opacity-0 transition-opacity group-data-[state=open]:opacity-100" />
+          <Plus className="absolute top-0 size-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
+          <Minus className="absolute top-0 size-4 opacity-0 transition-opacity group-data-[state=open]:opacity-100" />
         </span>
         {/* <ChevronDownIcon className="text-muted-foreground pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" /> */}
       </AccordionPrimitive.Trigger>

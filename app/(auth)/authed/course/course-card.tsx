@@ -1,4 +1,4 @@
-import { BookOpenIcon } from "@/components/custom-icons"
+import { BookOpenIcon, ChartBarIcon } from "@/components/custom-icons"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { cn } from "@/lib/utils"
@@ -111,7 +111,7 @@ export function CourseCard({
         <article className="space-y-1 py-2.5 px-5 flex-1 justify-center items-center">
           <h4 className="text-xs text-secondary text-center">Progress</h4>
           <section className="flex items-center justify-center gap-x-1">
-            <ChartNoAxesColumnIncreasing size={16} className="text-secondary" />
+            <ChartBarIcon className="text-secondary size-4" />
             <p className="text-primary text-sm font-bold whitespace-nowrap">
               <span>{currentProgress}</span>/<span>{maxProgress}</span>
             </p>
