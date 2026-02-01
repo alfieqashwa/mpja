@@ -7,7 +7,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
-export const BreadcumbDetailCourse = () => (
+export const BreadcrumbDetailCourse = () => (
   <Breadcrumb>
     <BreadcrumbList className="text-rose-600 font-bold">
       <BreadcrumbItem>
