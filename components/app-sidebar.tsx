@@ -34,6 +34,10 @@ import {
   SidebarUserIcon,
   SidebarUserSolidIcon,
 } from "./custom-icons"
+import {
+  AccordionCourseOverview,
+  COURSE_OVERVIEW_FOR_MODULE,
+} from "@/app/(auth)/authed/course/accordion-course-overview"
 
 const group1 = [
   {
@@ -85,6 +89,11 @@ const group2 = [
 
 export function AppSidebar() {
   const pathname = usePathname()
+
+  if (pathname === "/authed/module/course") {
+    return <SidebarForModulePage />
+  }
+
   return (
     <Sidebar collapsible="none">
       <SidebarHeader className="bg-white h-14 p-3">
@@ -103,7 +112,9 @@ export function AppSidebar() {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Dashboard</SidebarGroupLabel>
+          <SidebarGroupLabel className="font-bold text-[#475569] text-xs uppercase">
+            Dashboard
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {group1.map((item) => (
@@ -129,7 +140,9 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         <SidebarGroup>
-          <SidebarGroupLabel>Setting</SidebarGroupLabel>
+          <SidebarGroupLabel className="font-bold text-[#475569] text-xs uppercase">
+            Setting
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {group2.map((item) => (
@@ -176,6 +189,38 @@ export function AppSidebar() {
           <LogOut size={16} className="text-[#64748B]" />
         </div>
       </SidebarFooter>
+    </Sidebar>
+  )
+}
+
+function SidebarForModulePage() {
+  return (
+    <Sidebar
+      collapsible="none"
+      style={
+        {
+          "--sidebar-width": "400px",
+        } as React.CSSProperties
+      }
+    >
+      <SidebarHeader className="bg-white w-100 h-14 p-3">
+        <Link href="/" className="flex items-center gap-1">
+          <Image
+            src="/img/logo.png"
+            alt="MPJA"
+            width={41}
+            height={33}
+            priority
+            className="object-cover size-auto"
+          />
+          <span className="font-bold text-lg">MPJA Learning</span>
+        </Link>
+      </SidebarHeader>
+      <SidebarSeparator />
+      <SidebarContent className="px-4 py-5">
+        <h1 className="text-primary font-bold text-2xl">Halal Indonesian</h1>
+        <AccordionCourseOverview data={COURSE_OVERVIEW_FOR_MODULE} />
+      </SidebarContent>
     </Sidebar>
   )
 }
