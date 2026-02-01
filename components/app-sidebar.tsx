@@ -95,6 +95,7 @@ export function AppSidebar() {
             width={41}
             height={33}
             priority
+            className="object-cover size-auto"
           />
           <span className="font-bold text-lg">MPJA Learning</span>
         </Link>

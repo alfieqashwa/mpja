@@ -16,6 +16,7 @@ export default function LoginPage() {
               width={112}
               height={92}
               priority
+              className="object-cover"
             />
           </div>
 

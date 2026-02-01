@@ -19,6 +19,7 @@ export default function ForgotPasswordPage() {
               width={112}
               height={92}
               priority
+              className="object-cover"
             />
           </div>
 

@@ -45,6 +45,7 @@ export function Footer() {
               width={76}
               height={83}
               priority
+              className="object-cover"
             />
             <h3 className="text-3xl font-bold text-primary">MPJA Learning</h3>
           </div>
