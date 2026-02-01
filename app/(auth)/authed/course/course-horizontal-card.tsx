@@ -16,8 +16,22 @@ export const CourseHorizontalCard = ({
   category: CategoryCourse
 }) => {
   const buttonBasedOnCategory =
-    category === "not-started" || category === "on-going" ? (
-      <Link href="/authed/course/halal">
+    category === "not-started" ? (
+      <Link
+        href={{
+          pathname: "/authed/module/course",
+          query: { category },
+        }}
+      >
+        <Button className="cursor-pointer">Continue</Button>
+      </Link>
+    ) : category === "on-going" ? (
+      <Link
+        href={{
+          pathname: "/authed/module/course",
+          query: { category },
+        }}
+      >
         <Button className="cursor-pointer">Continue</Button>
       </Link>
     ) : category === "completed" ? (
