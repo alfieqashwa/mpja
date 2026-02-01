@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const DashboardHeader = ({ title }: { title: string }) => (
   <div className="fixed left-60 right-0 z-99">
-    <div className="bg-white h-14.25 px-4 flex justify-between items-center border-b-2">
+    <div className="bg-white h-14.25 px-4 border-l-2 flex justify-between items-center border-b-2">
       {/* Title */}
       <h2 className="text-primary capitalize font-bold text-lg">{title}</h2>
       <div className="gap-5 flex items-center">
