@@ -23,7 +23,6 @@ export type Course = {
   completedAssignments: number
   totalAssignments: number
   buttonTitle: string
-  href: string
   dueDate?: string
   price?: number
   isLiked?: boolean
@@ -40,7 +39,6 @@ export function CourseCard({
   completedAssignments,
   totalAssignments,
   buttonTitle,
-  href,
   dueDate,
   price,
   isLiked,
@@ -135,7 +133,12 @@ export function CourseCard({
           dueDate={dueDate as string}
           price={price as number}
         />
-        <Link href={`/authed/course/${encodeURIComponent(href)}`}>
+        <Link
+          href={{
+            pathname: "/authed/course/detail-course",
+            query: { category },
+          }}
+        >
           <Button size={"default"} className="cursor-pointer">
             {buttonTitle}
           </Button>

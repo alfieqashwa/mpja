@@ -1,6 +1,5 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { DashboardHeader } from "../../_components/dashboard-header"
 import { DashboardWrapper } from "../../_components/dashboard-wrapper"
 import { AccordionCourseOverview } from "../accordion-course-overview"
@@ -8,8 +7,16 @@ import { BreadcumbDetailCourse } from "../breadcumb-detail-course"
 import { CourseHorizontalCard } from "../course-horizontal-card"
 import { DetailInfo } from "../detail-info"
 import { Overview } from "../overview"
+import { CategoryCourse } from "../course-card"
 
-export default function DetailCompletedPage() {
+export default async function DetailContinuePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category: CategoryCourse }>
+}) {
+  const { category } = await searchParams
+  // console.log({ category })
+
   return (
     <div>
       <DashboardHeader title="Course" />
@@ -17,17 +24,7 @@ export default function DetailCompletedPage() {
         {/* Breadcumb */}
         <BreadcumbDetailCourse />
         {/* Course Card */}
-        <CourseHorizontalCard
-          button={
-            <section className="space-x-3">
-              <Button className="cursor-pointer">View All Material</Button>
-              <Button variant={"secondary"} className="cursor-pointer">
-                Download Certificates
-              </Button>
-            </section>
-          }
-        />
-
+        <CourseHorizontalCard category={category} />
         <div className="flex justify-between gap-6">
           <section className="space-y-6 w-3/4">
             {/* Overview */}

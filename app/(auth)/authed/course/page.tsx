@@ -27,7 +27,6 @@ const COURSES = [
     completedAssignments: 0,
     totalAssignments: 13,
     buttonTitle: "Start Learning",
-    href: "detail-continue",
   },
   {
     courseId: 2,
@@ -40,7 +39,6 @@ const COURSES = [
     completedAssignments: 10,
     totalAssignments: 13,
     buttonTitle: "Continue",
-    href: "detail-continue",
     dueDate: "24 Dec 2026",
   },
   {
@@ -54,7 +52,6 @@ const COURSES = [
     completedAssignments: 13,
     totalAssignments: 13,
     buttonTitle: "View",
-    href: "detail-completed",
     dueDate: "24 Dec 2026",
   },
   {
@@ -68,7 +65,6 @@ const COURSES = [
     completedAssignments: 0,
     totalAssignments: 13,
     buttonTitle: "Join Course Now",
-    href: "detail-wishlist",
     price: 7_000,
     isLiked: true,
   },
@@ -83,7 +79,6 @@ const COURSES = [
     completedAssignments: 13,
     totalAssignments: 13,
     buttonTitle: "View",
-    href: "detail-completed",
     dueDate: "24 Dec 2026",
   },
   {
@@ -97,7 +92,6 @@ const COURSES = [
     completedAssignments: 10,
     totalAssignments: 13,
     buttonTitle: "Continue",
-    href: "detail-continue",
     dueDate: "24 Dec 2026",
   },
   {
@@ -111,7 +105,6 @@ const COURSES = [
     completedAssignments: 0,
     totalAssignments: 13,
     buttonTitle: "Join Course Now",
-    href: "detail-wishlist",
     price: 7_000,
     isLiked: true,
   },
@@ -126,7 +119,6 @@ const COURSES = [
     completedAssignments: 0,
     totalAssignments: 13,
     buttonTitle: "Start Learning",
-    href: "detail-continue",
   },
 ] satisfies Course[]
 
@@ -166,7 +158,6 @@ export default function CoursePage() {
               completedAssignments={c.completedAssignments}
               totalAssignments={c.totalAssignments}
               buttonTitle={c.buttonTitle}
-              href={c.href}
               dueDate={c.dueDate}
               price={c.price}
               isLiked={c.isLiked}
