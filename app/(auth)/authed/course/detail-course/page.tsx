@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { DashboardHeader } from "../../_components/dashboard-header"
 import { DashboardWrapper } from "../../_components/dashboard-wrapper"
 import { AccordionCourseOverview } from "../accordion-course-overview"
-import { BreadcumbDetailCourse } from "../breadcumb-detail-course"
+import { BreadcrumbDetailCourse } from "../breadcrumb-detail-course"
+import { CategoryCourse } from "../course-card"
 import { CourseHorizontalCard } from "../course-horizontal-card"
 import { DetailInfo } from "../detail-info"
 import { Overview } from "../overview"
-import { CategoryCourse } from "../course-card"
 
 export default async function DetailContinuePage({
   searchParams,
@@ -22,7 +20,7 @@ export default async function DetailContinuePage({
       <DashboardHeader title="Course" />
       <DashboardWrapper>
         {/* Breadcumb */}
-        <BreadcumbDetailCourse />
+        <BreadcrumbDetailCourse />
         {/* Course Card */}
         <CourseHorizontalCard category={category} />
         <div className="flex justify-between gap-6">
@@ -30,7 +28,12 @@ export default async function DetailContinuePage({
             {/* Overview */}
             <Overview />
             {/* Accordion Course Overview */}
-            <AccordionCourseOverview />
+            <div className="p-5 border shadow-sm bg-white rounded-2xl">
+              <h3 className="text-2xl font-bold text-primary">
+                Course Overview
+              </h3>
+              <AccordionCourseOverview />
+            </div>
           </section>
           {/* Detail Information */}
           <DetailInfo />
