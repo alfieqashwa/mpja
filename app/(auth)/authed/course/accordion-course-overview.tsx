@@ -71,8 +71,8 @@ export const AccordionCourseOverview = ({
           key={`${idx}-${q.value}`}
           className="space-y-1"
         >
-          <AccordionTrigger className="bg-[#F8FAFC] px-5">
-            <article className="flex justify-between w-full items-center text-primary font-bold">
+          <AccordionTrigger className="bg-[#F8FAFC] px-5 flex items-center text-primary font-bold">
+            <article className="flex justify-between items-center w-full">
               <p className="">{q.question}</p>
               <p className="whitespace-nowrap">{q.chapter} Chapter</p>
             </article>
