@@ -1,14 +1,25 @@
+import { ArrowRightIcon } from "@/components/custom-icons"
 import Image from "next/image"
+import Link from "next/link"
 
 export const NoCourseYetCTA = () => (
-  <section className="space-y-2 px-5 py-6 border border-[#F59E0B] bg-[#FEF3C7] rounded-2xl shadow-md">
-    <h2 className="text-2xl font-bold text-[#D97706]">
-      Your profile is almost ready
-    </h2>
-    <p className="text-primary font-medium">
-      Complete the remaining steps to speed up verification and receive your
-      certificate without delays.
-    </p>
+  <section className="space-y-2 px-5 py-6 border border-[#F59E0B] bg-[#FEF3C7] rounded-2xl shadow-md flex justify-between items-center">
+    <article>
+      <h2 className="text-2xl font-bold text-[#D97706]">
+        Your profile is almost ready
+      </h2>
+      <p className="text-primary font-medium">
+        Complete the remaining steps to speed up verification and receive your
+        certificate without delays.
+      </p>
+    </article>
+    <Link
+      href="#"
+      className="flex space-x-2.5 items-center font-bold text-[#D97706]"
+    >
+      <span>Complete profile</span>
+      <ArrowRightIcon />
+    </Link>
   </section>
 )
 
