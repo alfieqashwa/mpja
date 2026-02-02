@@ -90,7 +90,7 @@ const group2 = [
 export function AppSidebar() {
   const pathname = usePathname()
 
-  if (pathname === "/authed/module/course") {
+  if (pathname.includes("module")) {
     return <SidebarForModulePage />
   }
 

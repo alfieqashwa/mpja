@@ -1,3 +1,5 @@
+"use client"
+
 import { LockSolidIcon, SmallBookIcon } from "@/components/custom-icons"
 import {
   Accordion,
@@ -5,11 +7,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { cn } from "@/lib/utils"
 import { CircleCheck } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 type Answer = {
   id: number
   title: string
+  href: string
 }
 
 export type CourseOverview = {
@@ -20,12 +26,12 @@ export type CourseOverview = {
 }
 
 const CUSTOM_ANSWERS = [
-  { id: 1, title: "Define Halal, Haram, and Mashbooh" },
-  { id: 2, title: "Explain why intention and process matter" },
-  { id: 3, title: "Identify examples of halal-friendly decisions" },
-  { id: 4, title: "Explain why intention and process matter" },
-  { id: 5, title: "Identify examples of halal-friendly decisions" },
-  { id: 6, title: "Assignment" },
+  { id: 1, title: "Define Halal, Haram, and Mashbooh", href: "#" },
+  { id: 2, title: "Explain why intention and process matter", href: "#" },
+  { id: 3, title: "Identify examples of halal-friendly decisions", href: "#" },
+  { id: 4, title: "Explain why intention and process matter", href: "#" },
+  { id: 5, title: "Identify examples of halal-friendly decisions", href: "#" },
+  { id: 6, title: "Assignment", href: "assignment" },
 ] satisfies Answer[]
 
 const COURSE_OVERVIEW = [
@@ -55,49 +61,62 @@ export const AccordionCourseOverview = ({
 }: {
   data?: CourseOverview[]
   isWishlist?: boolean
-}) => (
-  <Accordion type="multiple" className="pt-5" defaultValue={["question-1"]}>
-    {data.map((q, idx) => (
-      <AccordionItem
-        value={q.value}
-        key={`${idx}-${q.value}`}
-        className="space-y-1"
-      >
-        <AccordionTrigger className="bg-[#F8FAFC] px-5">
-          <article className="flex justify-between w-full items-center text-primary font-bold">
-            <p className="">{q.question}</p>
-            <p className="whitespace-nowrap">{q.chapter} Chapter</p>
-          </article>
-        </AccordionTrigger>
-        <AccordionContent>
-          <ul>
-            {q.answer.map((a, idx) => (
-              <li
-                className="flex justify-between items-center px-4 py-3.5"
-                key={`${idx}-${a.id}`}
-              >
-                <article className="space-x-1">
-                  <SmallBookIcon className="size-5 inline text-secondary" />
-                  <span className="text-secondary font-semibold text-sm">
-                    {a.title}
-                  </span>
-                </article>
-                {isWishlist ? (
-                  <LockSolidIcon className="size-6 text-[#64748B]" />
-                ) : (
-                  <CircleCheck
-                    size={24}
-                    className="text-white fill-[#22C55E]"
-                  />
-                )}
-              </li>
-            ))}
-          </ul>
-        </AccordionContent>
-      </AccordionItem>
-    ))}
-  </Accordion>
-)
+}) => {
+  const pathname = usePathname()
+  return (
+    <Accordion type="multiple" className="pt-5" defaultValue={["question-1"]}>
+      {data.map((q, idx) => (
+        <AccordionItem
+          value={q.value}
+          key={`${idx}-${q.value}`}
+          className="space-y-1"
+        >
+          <AccordionTrigger className="bg-[#F8FAFC] px-5">
+            <article className="flex justify-between w-full items-center text-primary font-bold">
+              <p className="">{q.question}</p>
+              <p className="whitespace-nowrap">{q.chapter} Chapter</p>
+            </article>
+          </AccordionTrigger>
+          <AccordionContent>
+            <ul>
+              {q.answer.map((a, idx) => (
+                <li
+                  className="flex justify-between items-center px-4 py-3.5"
+                  key={`${idx}-${a.id}`}
+                >
+                  <article
+                    className={cn(
+                      "space-x-1",
+                      pathname.includes(a.href)
+                        ? "text-primary"
+                        : "text-secondary",
+                    )}
+                  >
+                    <SmallBookIcon className="size-5 inline" />
+                    <Link
+                      href={`/authed/module/course/${a.href}`}
+                      className="font-semibold text-sm"
+                    >
+                      {a.title}
+                    </Link>
+                  </article>
+                  {isWishlist ? (
+                    <LockSolidIcon className="size-6 text-[#64748B]" />
+                  ) : (
+                    <CircleCheck
+                      size={24}
+                      className="text-white fill-[#22C55E]"
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  )
+}
 
 export const COURSE_OVERVIEW_FOR_MODULE = [
   {
