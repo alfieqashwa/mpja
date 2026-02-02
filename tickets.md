@@ -28,9 +28,13 @@
 
 [x] Auth Page (Login, Register, Forgot-password)
 
-[-] Dashboard
+[x] Dashboard
 
-[-] ...
+[x] Course
+
+[-] Certificate
+
+[-] Transaction
 
 #### Mobile View (No Figma Design Yet)
 
