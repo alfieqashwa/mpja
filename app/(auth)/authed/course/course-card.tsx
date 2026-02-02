@@ -46,7 +46,10 @@ export function CourseCard({
   const [likedCard, setLikedCard] = useState(isLiked)
 
   return (
-    <div id={courseId.toString()} className="bg-white p-4 rounded-2xl w-full">
+    <div
+      id={courseId.toString()}
+      className="bg-white p-4 rounded-2xl w-full shadow-sm"
+    >
       {/* Image Frame */}
       <div
         className="relative flex aspect-video items-center justify-center rounded-xl bg-[#FFF1F2]"

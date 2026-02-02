@@ -4,6 +4,7 @@ import { Suspense } from "react"
 import { DashboardWrapper } from "../../_components/dashboard-wrapper"
 import { BreadcrumbModule } from "./breadcrum-module"
 import { Button } from "@/components/ui/button"
+import { LangSelect } from "./lang-select"
 
 // custom sidebar
 export default function ModulePage() {
@@ -19,9 +20,12 @@ export default function ModulePage() {
           <h1 className="text-primary font-bold text-5xl">
             Define Halal, Haram, and Mashbooh
           </h1>
-          <p className="text-secondary font-medium text-lg">
-            1/10 | 45 minutes | Rayhan Kuswara | English
-          </p>
+          <section className="flex justify-between items-center">
+            <p className="text-secondary font-medium text-lg">
+              1/10 | 45 minutes | Rayhan Kuswara | English
+            </p>
+            <LangSelect />
+          </section>
         </article>
         <div className="space-y-4">
           <div className="relative aspect-video">
