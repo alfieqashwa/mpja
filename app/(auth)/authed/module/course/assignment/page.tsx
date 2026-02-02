@@ -42,6 +42,7 @@ export default function AssignmentPage() {
   useEffect(() => {
     if (isQuizCompleted) {
       triggerRealisticConfetti()
+      setSelected(null) // set selected to default value
     }
   }, [isQuizCompleted, triggerRealisticConfetti])
 
@@ -50,7 +51,12 @@ export default function AssignmentPage() {
       <DashboardHeader title="Course" left="left-100" />
       <DashboardWrapper className="relative">
         <TemporaryCompletedSwitch
-          isCorrect={selected === "B"} // hard coded for simplicity, dude
+          /*
+           * if the user answer is correct OR if the isQuizCompleted is true AND selected is null,
+           * then display this temporary toggle switch.
+           * The aim is to make start over the quiz from the beginning when the toggling back to false
+           */
+          isCorrect={selected === "B" || (selected === null && isQuizCompleted)}
           isQuizCompleted={isQuizCompleted}
           setIsQuizCompleted={setIsQuizCompleted}
         />
