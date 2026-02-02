@@ -1,23 +1,27 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
 import { cn } from "@/lib/utils"
 import confetti from "canvas-confetti"
-import { useRouter } from "next/navigation"
 import { useCallback, useEffect, useState } from "react"
 import { DashboardHeader } from "../../../_components/dashboard-header"
 import { DashboardWrapper } from "../../../_components/dashboard-wrapper"
 import { CompletedQuiz } from "./completed-quiz"
+import { FooterAssignment } from "./footer-assignment"
 import { IncompletedQuiz } from "./incompleted-quiz"
 
 export default function AssignmentPage() {
   const [selected, setSelected] = useState<string | null>(null)
-  const [isCompleted, setIsCompleted] = useState(false)
+  const [isQuizCompleted, setIsQuizCompleted] = useState(false)
 
   const triggerRealisticConfetti = useCallback(() => {
-    const count = 200
-    const defaults = { origin: { y: 0.7 } }
+    const count = 2000
+    const defaults = {
+      origin: {
+        x: 0.56,
+        y: 0.25,
+      },
+    }
 
     function fire(particleRatio: number, opts: confetti.Options) {
       confetti({
@@ -36,70 +40,42 @@ export default function AssignmentPage() {
 
   // Trigger Confetti when Switch is toggled
   useEffect(() => {
-    if (isCompleted) {
+    if (isQuizCompleted) {
       triggerRealisticConfetti()
     }
-  }, [isCompleted, triggerRealisticConfetti])
-
-  const router = useRouter()
+  }, [isQuizCompleted, triggerRealisticConfetti])
 
   return (
     <div>
       <DashboardHeader title="Course" left="left-100" />
       <DashboardWrapper className="relative">
         <TemporaryCompletedSwitch
-          isCorrect={selected === "B"}
-          isCompleted={isCompleted}
-          setIsCompleted={setIsCompleted}
+          isCorrect={selected === "B"} // hard coded for simplicity, dude
+          isQuizCompleted={isQuizCompleted}
+          setIsQuizCompleted={setIsQuizCompleted}
         />
-        {isCompleted ? (
+        {isQuizCompleted ? (
           <CompletedQuiz />
         ) : (
           <IncompletedQuiz selected={selected} setSelected={setSelected} />
         )}
       </DashboardWrapper>
-      <footer className="bg-white h-15 fixed z-99 border bottom-0 px-4 flex items-center justify-between w-full max-w-7xl">
-        <p
-          className={cn(
-            "text-lg font-bold text-primary",
-            isCompleted ? "invisible" : "",
-          )}
-        >
-          Assigment 1/3
-        </p>
-        <section className="space-x-5">
-          {isCompleted ? (
-            <Button
-              variant={"ghost"}
-              onClick={() => setIsCompleted(false)}
-              className="cursor-pointer bg-[#E2E8F0] text-secondary hover:bg-slate-300"
-            >
-              Retake Quiz
-            </Button>
-          ) : (
-            <Button
-              variant={"ghost"}
-              onClick={() => router.back()}
-              className="cursor-pointer bg-[#E2E8F0] text-secondary hover:bg-slate-300"
-            >
-              Back
-            </Button>
-          )}
-          <Button className="cursor-pointer">Continue</Button>
-        </section>
-      </footer>
+      <FooterAssignment
+        isQuizCompleted={isQuizCompleted}
+        setIsQuizCompleted={setIsQuizCompleted}
+      />
     </div>
   )
 }
 
 const TemporaryCompletedSwitch = ({
   isCorrect,
-  isCompleted,
-  setIsCompleted,
+  isQuizCompleted,
+  setIsQuizCompleted,
 }: {
   isCorrect: boolean
-  isCompleted: boolean
-  setIsCompleted: React.Dispatch<React.SetStateAction<boolean>>
+  isQuizCompleted: boolean
+  setIsQuizCompleted: React.Dispatch<React.SetStateAction<boolean>>
 }) => (
   <div
     className={cn(
@@ -109,8 +85,8 @@ const TemporaryCompletedSwitch = ({
   >
     <Switch
       id="debug-mode"
-      checked={isCompleted}
-      onCheckedChange={setIsCompleted}
+      checked={isQuizCompleted}
+      onCheckedChange={setIsQuizCompleted}
       className="data-[state=checked]:bg-emerald-500 data-[state=unchecked]:bg-secondary cursor-pointer"
     />
   </div>

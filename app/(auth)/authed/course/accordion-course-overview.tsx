@@ -95,7 +95,12 @@ export const AccordionCourseOverview = ({
                     <SmallBookIcon className="size-5 inline" />
                     <Link
                       href={`/authed/module/course/${a.href}`}
-                      className="font-semibold text-sm"
+                      className={cn(
+                        "font-semibold text-sm",
+                        a.href === "assignment" && !pathname.includes(a.href)
+                          ? "animate-pulse"
+                          : "",
+                      )}
                     >
                       {a.title}
                     </Link>
