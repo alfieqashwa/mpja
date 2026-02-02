@@ -48,7 +48,7 @@ export function CompletedQuiz() {
           you’re ready.
         </p>
       </article>
-      <div className="flex h-25 items-center mt-10 justify-evenly bg-[#F8FAFC] p-4 w-full max-w-3/4 rounded mx-auto">
+      <div className="flex h-25 items-center mt-10 justify-around bg-[#F8FAFC] p-4 w-full max-w-3/4 rounded mx-auto">
         {SCORE_QUIZ.map((q, i) => (
           <React.Fragment key={i}>
             <section className="flex flex-col items-center justify-center space-y-1">
