@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/field"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 type MultipleChoice = {
   id: string
@@ -44,21 +45,23 @@ const MULTIPLE_CHOICE = [
 
 export default function AssignmentPage() {
   const [selected, setSelected] = useState<string | null>(null)
-  useState<"default" | "correct" | "wrong" | "celebrate">("default")
+  // useState<"default" | "correct" | "wrong" | "celebrate">("default")
+
+  const userChoice = MULTIPLE_CHOICE.find((c) => c.id === selected)
   return (
     <div>
       <DashboardHeader title="Course" left="left-100" />
       <DashboardWrapper>
         <div className="rounded-2xl border bg-white shado-sm p-6">
           <h2 className="text-primary font-bold text-2xl">Quiz 1 (25 Score)</h2>
-          <article className="pt-8">
+          <section className="pt-8">
             <h3 className="text-primary font-semibold text-xl">
               Which statement best describes Halal?
             </h3>
             <RadioGroup
               defaultValue="none"
               onValueChange={(val) => setSelected(val)}
-              className="py-3"
+              className="pt-3"
             >
               {MULTIPLE_CHOICE.map((c, i) => (
                 <FieldLabel
@@ -92,14 +95,28 @@ export default function AssignmentPage() {
                   </Field>
                 </FieldLabel>
               ))}
+              {userChoice?.id && !userChoice?.answer && (
+                <p className="text-lg font-semibold text-primary pt-5">
+                  Not quite. Halal means permissible/allowed. Option A describes
+                  Mashbooh—things that are uncertain and should be verified.
+                </p>
+              )}
             </RadioGroup>
-            <p className="text-lg font-semibold text-primary pt-5">
-              Not quite. Halal means permissible/allowed. Option A describes
-              Mashbooh—things that are uncertain and should be verified.
-            </p>
-          </article>
+          </section>
         </div>
       </DashboardWrapper>
+      <footer className="bg-white h-15 fixed z-99 border bottom-0 px-4 flex items-center justify-between w-full max-w-7xl">
+        <p className="text-lg font-bold text-primary">Assigment 1/3</p>
+        <section className="space-x-5">
+          <Button
+            variant={"ghost"}
+            className="cursor-pointer bg-[#E2E8F0] text-secondary hover:bg-slate-300"
+          >
+            Back
+          </Button>
+          <Button className="cursor-pointer">Continue</Button>
+        </section>
+      </footer>
     </div>
   )
 }
