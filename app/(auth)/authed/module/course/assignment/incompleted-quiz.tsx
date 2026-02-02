@@ -99,8 +99,6 @@ export function IncompletedQuiz({
           )}
         </RadioGroup>
       </section>
-      <pre className="mt-6">{JSON.stringify(selected, null, 4)}</pre>
-      <pre className="mt-6">{JSON.stringify(userChoice, null, 4)}</pre>
     </div>
   )
 }
