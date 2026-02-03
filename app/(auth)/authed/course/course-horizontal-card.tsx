@@ -4,11 +4,11 @@ import {
   ChartBarIcon,
   CrownIcon,
 } from "@/components/custom-icons"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { BookOpen, ScrollText } from "lucide-react"
-import { CategoryCourse } from "./course-card"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { CategoryCourse } from "../_components/course-card"
 
 export const CourseHorizontalCard = ({
   category,

@@ -1,10 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import {
+  type CategoryCourse,
+  type Course,
+  CourseCard,
+} from "../_components/course-card"
 import { DashboardHeader } from "../_components/dashboard-header"
 import { DashboardTitle } from "../_components/dashboard-title"
 import { DashboardWrapper } from "../_components/dashboard-wrapper"
-import { type CategoryCourse, type Course, CourseCard } from "./course-card"
 import { CourseCategoryButton } from "./course-category-button"
 
 /*

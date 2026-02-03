@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { type CategoryCourse } from "./course-card"
+import { type CategoryCourse } from "../_components/course-card"
 
 type CourseCategoryButtonProps = {
   categoryCourse: CategoryCourse | "all"

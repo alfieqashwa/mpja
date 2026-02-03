@@ -3,7 +3,7 @@
 import { DashboardHeader } from "../_components/dashboard-header"
 import { DashboardTitle } from "../_components/dashboard-title"
 import { DashboardWrapper } from "../_components/dashboard-wrapper"
-import { Course, CourseCard } from "../course/course-card"
+import { Course, CourseCard } from "../_components/course-card"
 
 const RECEIPTS = [
   {
