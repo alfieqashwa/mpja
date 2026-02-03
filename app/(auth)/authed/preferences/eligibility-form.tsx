@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 
-export function CourseForm() {
+export function EligibilityForm() {
   return (
     <div className="mx-auto p-8 bg-white rounded-2xl border border-border shadow-sm font-sans">
       <div className="mb-6">

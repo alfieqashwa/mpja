@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { useState } from "react"
 import { DashboardHeader } from "../_components/dashboard-header"
 import { DashboardWrapper } from "../_components/dashboard-wrapper"
-import { CourseForm } from "./course-form"
+import { EligibilityForm } from "./eligibility-form"
 import { ProfileForm } from "./profile-form"
 import { StudentVerificationForm } from "./student-form"
 
@@ -17,7 +17,7 @@ const BUTTONS = [
 ]
 
 export default function PreferencesPage() {
-  const [stepForm, setStepForm] = useState<number>(3)
+  const [stepForm, setStepForm] = useState<number>(1)
 
   return (
     <div>
@@ -42,7 +42,7 @@ export default function PreferencesPage() {
 
         {stepForm === 0 && <ProfileForm />}
         {stepForm === 2 && <StudentVerificationForm />}
-        {stepForm === 3 && <CourseForm />}
+        {stepForm === 3 && <EligibilityForm />}
       </DashboardWrapper>
     </div>
   )
