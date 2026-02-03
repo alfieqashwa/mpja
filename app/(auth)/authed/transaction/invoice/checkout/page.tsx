@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { jpyCurrency } from "@/lib/jpy-currency"
+import Link from "next/link"
 import { DashboardHeader } from "../../../_components/dashboard-header"
 import { DashboardWrapper } from "../../../_components/dashboard-wrapper"
 import { DETAIL_INFO } from "../../../course/detail-info"
@@ -75,7 +76,9 @@ export default function CheckoutPage() {
               You will be redirected to Stripe Checkout to complete your
               payment.
             </p>
-            <Button className="cursor-pointer w-full">Pay With Stripe</Button>
+            <Link href={"/authed/transaction/invoice/checkout/stripe"}>
+              <Button className="cursor-pointer w-full">Pay With Stripe</Button>
+            </Link>
           </div>
         </section>
 
