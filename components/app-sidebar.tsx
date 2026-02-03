@@ -110,7 +110,7 @@ export function AppSidebar() {
         </Link>
       </SidebarHeader>
       <SidebarSeparator />
-      <SidebarContent>
+      <SidebarContent className="mt-6">
         <SidebarGroup>
           <SidebarGroupLabel className="font-bold text-[#475569] text-xs uppercase">
             Dashboard

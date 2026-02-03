@@ -42,6 +42,21 @@ const CARDS = [
   },
 ]
 
+const DASHBOARD_COURSE_LIST = [
+  {
+    course: "halal japan beginner course",
+    content: 5,
+    completion: { completed: 64, total: 100 },
+    assignment: { completed: 6, total: 10 },
+  },
+  {
+    course: "halal japan beginner course",
+    content: 5,
+    completion: { completed: 64, total: 100 },
+    assignment: { completed: 6, total: 10 },
+  },
+]
+
 export default function DashboardPage() {
   const [showCourses, setShowCourses] = useState(true)
 
@@ -77,7 +92,24 @@ export default function DashboardPage() {
         {!showCourses && <NoCourseYetCard />}
 
         {/* if there's data */}
-        {showCourses && <CourseList />}
+        {showCourses && (
+          <div className="rounded-4xl bg-white py-6 px-5 shadow-sm">
+            <div className="flex items-center justify-between">
+              <article className="space-y-2">
+                <h5 className="font-bold text-2xl text-slate-900 ">
+                  Courses you&apos;re enrolled in.
+                </h5>
+                <p className="text-secondary font-medium">
+                  See your active courses, progress, and what to learn next
+                </p>
+              </article>
+              <span className="font-bold text-rose-600 cursor-pointer">
+                View all courses
+              </span>
+            </div>
+            <CourseList courses={DASHBOARD_COURSE_LIST} />
+          </div>
+        )}
       </DashboardWrapper>
     </div>
   )
