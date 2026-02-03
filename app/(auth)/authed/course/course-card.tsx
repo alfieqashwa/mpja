@@ -11,6 +11,7 @@ export type CategoryCourse =
   | "on-going"
   | "completed"
   | "wishlist"
+  | "receipt"
 
 export type Course = {
   courseId: number
@@ -138,7 +139,10 @@ export function CourseCard({
         />
         <Link
           href={{
-            pathname: "/authed/course/detail-course",
+            pathname:
+              category === "receipt"
+                ? "/authed/transaction/invoice"
+                : "/authed/course/detail-course",
             query: { category },
           }}
         >
@@ -180,6 +184,18 @@ const CourseCategoryInfo = ({
         <p className="text-sm text-[#D97706] font-bold">
           <Medal size={24} className="inline" />{" "}
           <span>Completed Certificated</span>
+        </p>
+        <p className="text-secondary text-xs">Due Date {dueDate}</p>
+      </div>
+    )
+  if (category === "receipt")
+    return (
+      <div className="space-y-2">
+        <p className="text-2xl text-danger font-bold">
+          {new Intl.NumberFormat("ja-JP", {
+            style: "currency",
+            currency: "JPY",
+          }).format(price as number)}
         </p>
         <p className="text-secondary text-xs">Due Date {dueDate}</p>
       </div>
