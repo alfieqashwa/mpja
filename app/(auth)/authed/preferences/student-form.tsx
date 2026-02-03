@@ -40,7 +40,7 @@ export function StudentVerificationForm() {
         </Label>
         <div className="col-span-12 md:col-span-7 relative">
           <Select>
-            <SelectTrigger className="w-full px-4 py-5 bg-slate-50/30 data-[placeholder]:text-[#CBD5E1] data-[placeholder]:font-medium">
+            <SelectTrigger className="w-full px-4 py-5.5 bg-slate-50/30 data-[placeholder]:text-[#CBD5E1] data-[placeholder]:font-medium">
               <SelectValue placeholder="Select an ID" />
             </SelectTrigger>
             <SelectContent>
