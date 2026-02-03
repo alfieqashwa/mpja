@@ -94,6 +94,10 @@ export function AppSidebar() {
     return <SidebarForModulePage />
   }
 
+  if (pathname.includes("invoice")) {
+    return
+  }
+
   return (
     <Sidebar collapsible="none">
       <SidebarHeader className="bg-white h-14 p-3">
