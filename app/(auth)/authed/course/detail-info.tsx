@@ -3,7 +3,7 @@ import { SeparatorDash } from "@/components/separator-dash"
 import { CalendarDays, Clock3, Keyboard, Laptop } from "lucide-react"
 import Image from "next/image"
 
-const DETAIL_INFO = [
+export const DETAIL_INFO = [
   {
     icon: <Clock3 className="text-secondary" />,
     info: "3 Hours Estimation",
