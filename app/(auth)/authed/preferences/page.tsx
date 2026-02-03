@@ -8,6 +8,7 @@ import { DashboardWrapper } from "../_components/dashboard-wrapper"
 import { EligibilityForm } from "./eligibility-form"
 import { ProfileForm } from "./profile-form"
 import { StudentVerificationForm } from "./student-form"
+import { IdDetail } from "./id-detail"
 
 const BUTTONS = [
   { title: "Profile" },
@@ -41,6 +42,7 @@ export default function PreferencesPage() {
         </div>
 
         {stepForm === 0 && <ProfileForm />}
+        {stepForm === 1 && <IdDetail />}
         {stepForm === 2 && <StudentVerificationForm />}
         {stepForm === 3 && <EligibilityForm />}
       </DashboardWrapper>
