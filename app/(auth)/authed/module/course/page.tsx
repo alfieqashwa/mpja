@@ -1,10 +1,10 @@
 import { DashboardHeader } from "@/app/(auth)/authed/_components/dashboard-header"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { Suspense } from "react"
 import { DashboardWrapper } from "../../_components/dashboard-wrapper"
 import { BreadcrumbModule } from "./breadcrum-module"
-import { Button } from "@/components/ui/button"
-import { LangSelect } from "./lang-select"
+import { LanguageSelect } from "./language-select"
 
 // custom sidebar
 export default function ModulePage() {
@@ -24,7 +24,7 @@ export default function ModulePage() {
             <p className="text-secondary font-medium text-lg">
               1/10 | 45 minutes | Rayhan Kuswara | English
             </p>
-            <LangSelect />
+            <LanguageSelect />
           </section>
         </article>
         <div className="space-y-4">

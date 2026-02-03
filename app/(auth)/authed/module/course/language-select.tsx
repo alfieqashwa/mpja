@@ -236,7 +236,7 @@ const LANGUAGES = [
   { title: "spanish", icon: <SpanishFlagIcon className="size-5" /> },
 ]
 
-export function LangSelect() {
+export function LanguageSelect() {
   return (
     <Select defaultValue={LANGUAGES[0].title}>
       <SelectTrigger className="w-full max-w-48 p-3">
