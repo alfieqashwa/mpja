@@ -20,7 +20,7 @@
 
 [x] CTA
 
-[-] Sidebars
+[x] Sidebars
 
 #### Pages UI
 
@@ -28,13 +28,29 @@
 
 [x] Auth Page (Login, Register, Forgot-password)
 
+#### USER UI
+
 [x] Dashboard
 
 [x] Course
 
+[x] Transaction
+
+[x] Certificate
+
+[x] Preferences
+
+#### ADMIN UI
+
+[-] Dashboard
+
+[-] Course
+
 [-] Certificate
 
-[-] Transaction
+[-] Enrollments
+
+[-] Payment
 
 #### Mobile View (No Figma Design Yet)
 
