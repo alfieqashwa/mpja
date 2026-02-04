@@ -18,7 +18,7 @@ const BUTTONS = [
 ]
 
 export default function PreferencesPage() {
-  const [stepForm, setStepForm] = useState<number>(1)
+  const [stepForm, setStepForm] = useState<number>(0)
 
   return (
     <div>
